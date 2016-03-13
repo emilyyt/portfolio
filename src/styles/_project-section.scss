@@ -1,0 +1,25 @@
+/*_project-section.scss
+
+style of the project section on the home page
+*/
+
+.description-container {
+	background-color: $gray-11;
+	padding-top: 80px;
+	padding-left: 40px;
+}
+
+.splash {
+	background-size: cover;
+}
+
+.grace-hopper {
+	background-image: url(../images/ghc.png);
+}
+
+.description {
+	width: 92%;
+	font-family: 'Vollkorn', Times, serif;
+	color: $gray-5;
+	line-height: 2;
+}

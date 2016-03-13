@@ -71,9 +71,20 @@ header {
 		letter-spacing: 3px;
 		align-items: center;
 		li {
-			padding-left: 30px;
+			margin-left: 30px;
+
+			&:hover {
+				color: $gray-8;
+				transform: translate(0px,-1px);
+				transition: all 0.2s ease-in-out;
+			}
 
 		}
+	}
+
+	.line-decor {
+		border-bottom: 1px solid $gray-6;
+		width: 10%;
 	}
 }
 
