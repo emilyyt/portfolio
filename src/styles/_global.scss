@@ -1,0 +1,22 @@
+/*global.scss. 
+
+all the global variables are defined here*/
+
+$header-background: #433C4C;
+$header-padding-right: 90px;
+
+$branding-blue: #5893FF;
+$branding-red: #FF7360;
+
+$gradient-border-height-px: 10px;
+
+
+// Mixins
+@mixin container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+@mixin clearfix{
+  overflow: auto;
+}
