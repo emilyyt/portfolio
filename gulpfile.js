@@ -35,34 +35,44 @@ var DEST_PATH = {
 /*Tasks include checking js errors with jshint, 
 using del to clean out old js files,
 using uglify to minify js
+using sourcemaps to map from the minified files
+using stylish to report and organize the error logging
+using plumber to prevent watch from stopping at a syntax error
 */
 
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
+var stylish = require('jshint-stylish');
+
+//This resolves the gulp watch stopping issue in the script task
+var plumber = require('gulp-plumber');
+
+
+
+// concat, minify and clean src js files
+gulp.task('scripts', ['clean-js'], function() {
+	return gulp.src(SRC_PATH.javascript)
+	.pipe(plumber())
+	.pipe(concat('all.js'))
+	.pipe(gulp.dest(DEST_PATH.javascript))
+	.pipe(rename('bundle.min.js'))
+	.pipe(uglify())
+	.pipe(sourcemaps.write())
+	.pipe(gulp.dest(DEST_PATH.javascript));
+});
 
 // lint task: check and report js errors
 gulp.task('lint', function(){
 	return gulp.src(SRC_PATH.javascript)
 		.pipe(jshint())
-		.pipe(jshint.reporter('default'));
+		.pipe(jshint.reporter(stylish));
 });
 
 gulp.task('clean-js', function() {
 	del([DEST_PATH.javascript+'/*.js', 
-			'!'+DEST_PATH.javascript+'/lib/*.js'])
-});
-
-// concat, minify and clean src js files
-gulp.task('scripts', ['clean-js'], function() {
-	return gulp.src(SRC_PATH.javascript)
-	.pipe(concat('all.js'))
-	.pipe(gulp.dest(DEST_PATH.javascript))
-	.pipe(rename('all.min.js'))
-	.pipe(uglify())
-	.pipe(sourcemaps.write())
-	.pipe(gulp.dest(DEST_PATH.javascript));
+			'!'+DEST_PATH.javascript+'/lib/*.js']);
 });
 
 //=========Style Tasks====================

@@ -3,7 +3,7 @@
 all associated styles are stored in this centralized location
  */
 
-@import url(http://fonts.googleapis.com/css?family=Lato:100,200,300,400,700,900,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,200,300,300italic,400,700,900,400italic);
 @import url(https://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic);
 
 
@@ -13,3 +13,4 @@ all associated styles are stored in this centralized location
 @import '_base.scss';
 @import '_header.scss';
 @import '_project-section.scss';
+@import '_resume-section.scss';

@@ -11,8 +11,17 @@ header {
 	display: flex;
   	flex-flow: column;
 
-}
+	a, a:visited, a:link {
+		color: white;
+		&:hover {
+			color: $gray-8;
+			transform: translate(0px,-1px);
+			transition: all 0.1s ease-in-out;
+		}
+	}
 
+
+}
 
 .header-content-container {
 	position: relative;
@@ -25,6 +34,7 @@ header {
 	background-repeat: no-repeat;
 	border-top: $gradient-border-height-px solid;
 
+	/*Page-border style. Sticky style is in _project-section.scss*/
 	&:first-child:before {
 		content: '';
 		position: absolute;
@@ -59,11 +69,16 @@ header {
 }
 
 .header-menu {
-	padding-right: $header-padding-right;
 	flex: 1;
 	display: flex;
 	flex-flow: column;
 	align-items: flex-end;
+	position: relative;
+
+	&.cover-menu {
+		padding-right: $header-padding-right;
+	}
+
 	ul {
 		display: flex;
 		flex: 1;
@@ -72,19 +87,13 @@ header {
 		align-items: center;
 		li {
 			margin-left: 30px;
-
-			&:hover {
-				color: $gray-8;
-				transform: translate(0px,-1px);
-				transition: all 0.2s ease-in-out;
-			}
+			align-self: stretch;
+			align-items: center;
+			display: flex;
 
 		}
 	}
 
-	.line-decor {
-		border-bottom: 1px solid $gray-6;
-		width: 10%;
-	}
+	
 }
 

@@ -1,0 +1,90 @@
+/*_resume-section.scss
+
+styles for resumes are here
+*/
+
+.resume {
+	background-color: $gray-11;
+	padding-bottom: 45px;
+
+}
+
+.download-button {
+	border: 2px solid $gray-7;
+	display: inline-block;
+	padding: 6px 33px;
+	text-transform: uppercase;
+	color: $gray-7;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 17px;
+
+}
+
+.resume-download {
+	margin-bottom: 70px;
+	a, a:visited, a:link {
+		color: $gray-7;
+		&:hover {
+			background-color: $gray-7;
+			color: $gray-11;
+			transition: all 0.1s ease-in;
+		}
+	}
+
+}
+
+.resume-content-container {
+	display: flex;
+	flex-direction: column;
+	color: $gray-6;
+}
+
+.resume-content {
+	flex: 1;
+	display: flex;
+}
+
+.resume-heading {
+	font-family: 'Villkorn', Times, serif;
+	line-height: 1.2;
+	font-style: italic;
+	letter-spacing: 3px;
+	font-size: 22px;
+	font-weight: 400;
+	flex: 1;
+}
+
+.resume-description {
+	flex: 3;
+	font-size: 16px;
+
+	ul {
+		margin-bottom: 35px;
+	}
+
+	li {
+		margin-bottom: 15px;
+	}
+
+	.resume-date {
+		color: $gray-8;
+		text-transform: uppercase;
+	}
+
+	.resume-org, .resume-role {
+		font-weight: 400;
+		color: $gray-3;
+	}
+
+	.resume-role {
+		font-style: italic;
+	}
+
+	.resume-detail {
+		font-weight: 300;
+		color: $gray-1;
+		line-height: 250%;
+	}
+
+}
