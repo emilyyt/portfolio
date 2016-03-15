@@ -46,6 +46,12 @@ h2 {
 	}
 }
 
+/* Link styling */
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none; 
+  color: black;
+}
+
 
 section {
 	@include container;

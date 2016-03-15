@@ -9,18 +9,18 @@ header {
 	background-color: $header-background;
 	color: white;
 	display: flex;
-  	flex-flow: column;
+  flex-direction: column;
 
-	a, a:visited, a:link {
+  a, a:link, a:visited, a:hover, a:active {
+		font-size: 11px;
 		color: white;
-		&:hover {
+
+  	&:hover {
 			color: $gray-8;
 			transform: translate(0px,-1px);
 			transition: all 0.1s ease-in-out;
-		}
-	}
-
-
+  	};
+  }
 }
 
 .header-content-container {
@@ -33,6 +33,7 @@ header {
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-top: $gradient-border-height-px solid;
+	flex: 1;
 
 	/*Page-border style. Sticky style is in _project-section.scss*/
 	&:first-child:before {
@@ -69,31 +70,66 @@ header {
 }
 
 .header-menu {
-	flex: 1;
 	display: flex;
-	flex-flow: column;
+/*	flex-flow: column;*/
 	align-items: flex-end;
 	position: relative;
-
-	&.cover-menu {
-		padding-right: $header-padding-right;
-	}
+	height: 80px; /*cover photo is 100% - 90px - 10px of top border*/
+	width: 100%;
 
 	ul {
 		display: flex;
 		flex: 1;
+		align-self: stretch;
 		text-transform: uppercase;
 		letter-spacing: 3px;
-		align-items: center;
+		padding-right: $header-padding-right;
+		justify-content: flex-end;
 		li {
 			margin-left: 30px;
-			align-self: stretch;
 			align-items: center;
 			display: flex;
 
 		}
 	}
+}
 
-	
+.header-menu.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 1000;
+/*	background-color: rgba(240,238,241, 0.8);*/
+	background-color: $header-background;
+/*	transition: all 0.5s ease-in-out;*/
+
+	a, a:visited, a:link {
+		&:hover {
+			color: $gray-8;
+			transform: translate(0px,-1px);
+			transition: all 0.1s ease-in-out;
+
+		}
+	}
+}
+
+.name {
+	flex: 1;
+	align-self: stretch;
+	margin-left: 0;
+	background-size: 110px;
+	background-position: $header-padding-right 50%;
+	background-image: url(../images/emilytsai.png);
+	background-repeat: no-repeat;
+
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 166ms;
+
+	&.hide {
+		opacity: 0;
+		transform: translateY(10px);
+	}
 }
 
