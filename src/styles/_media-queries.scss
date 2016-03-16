@@ -33,6 +33,26 @@ mobile styles!
 		}
 	}
 
+
+	[class*='col-'] {
+		display: block;
+		float: none;
+		width: 100%;
+		padding: 20px 20px;
+		height: 380px;
+		font-size: 15px;
+
+		h2 {
+			font-size: 20px;
+		}
+
+		&.splash {
+			margin-bottom: 0;
+			width: 100%;
+			background-position: contain
+		}
+	}
+
 	.header-content {
 		width: 75%;
 		margin: 0;
@@ -57,22 +77,9 @@ mobile styles!
 		}
 	}
 
-	[class*='col-'] {
-		display: block;
-		float: none;
-		width: 100%;
-		padding: 20px 20px;
-		height: 380px;
-		font-size: 15px;
-
-		h2 {
-			font-size: 20px;
-		}
-
-		&.splash {
-			margin-bottom: 0;
-			width: 100%;
-			background-position: contain
+	.project-overall {
+		a {
+			filter: grayscale(0);
 		}
 	}
 	.resume-heading {

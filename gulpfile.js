@@ -10,6 +10,8 @@
 
 // ========Dependencies==============
 
+'use strict';
+
 // include gulp
 var gulp = require('gulp');
 
@@ -20,7 +22,8 @@ var del = require('del');
 // ========Globals====================
 
 var SRC_PATH = {
-	javascript: 'src/js/index.js',
+	jsMain: 'src/js/main.js',
+	javascript: 'src/js/*.js',
 	styles: 'src/styles/*.scss',
 	images: 'src/images/*'
 }
@@ -38,6 +41,9 @@ using uglify to minify js
 using sourcemaps to map from the minified files
 using stylish to report and organize the error logging
 using plumber to prevent watch from stopping at a syntax error
+using browserify to create modular js and then bundle it
+using gutil, tap and buffer to sort out the stream compatibility
+issue between gulp and browserify (see https://github.com/gulpjs/gulp/pull/1380)
 */
 
 var jshint = require('gulp-jshint');
@@ -45,6 +51,12 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var stylish = require('jshint-stylish');
+var browserify = require('browserify');
+//var transform = require('vinyl-transform');
+//var source = require('vinyl-source-stream')
+var gutil = require('gulp-util');
+var tap = require('gulp-tap');
+var buffer = require('gulp-buffer');
 
 //This resolves the gulp watch stopping issue in the script task
 var plumber = require('gulp-plumber');
@@ -53,13 +65,27 @@ var plumber = require('gulp-plumber');
 
 // concat, minify and clean src js files
 gulp.task('scripts', ['clean-js'], function() {
-	return gulp.src(SRC_PATH.javascript)
+
+
+
+	return gulp.src([SRC_PATH.jsMain],  {read: false})
+	// transform file objects using gulp-tap plugin
+    .pipe(tap(function (file) {
+	 
+	   gutil.log('bundling ' + file.path);
+
+	   // replace file contents with browserify's bundle stream
+	   file.contents = browserify(file.path, {debug: true}).bundle();
+
+	 }))
+	 
+	.pipe(buffer())
 	.pipe(plumber())
+	.pipe(sourcemaps.write())
 	.pipe(concat('all.js'))
 	.pipe(gulp.dest(DEST_PATH.javascript))
 	.pipe(rename('bundle.min.js'))
 	.pipe(uglify())
-	.pipe(sourcemaps.write())
 	.pipe(gulp.dest(DEST_PATH.javascript));
 });
 
@@ -74,6 +100,8 @@ gulp.task('clean-js', function() {
 	del([DEST_PATH.javascript+'/*.js', 
 			'!'+DEST_PATH.javascript+'/lib/*.js']);
 });
+
+
 
 //=========Style Tasks====================
 /* Tasks include using sass to convert scss to css,

@@ -2,7 +2,8 @@
 
 all the global variables are defined here*/
 
-$page-container-width: 960px;
+$home-page-container-width: 960px;
+$project-page-container-width: 840px;
 $grid-padding: 0px;
 $grid-height: 360px;
 
@@ -19,18 +20,33 @@ $gradient-border-height-px: 10px;
 
 @mixin container {
   margin: 0 auto;
-  width: $page-container-width;
+  width: $home-page-container-width;
+
+  &:after {
+  	content: "";
+  	display: table;
+  	clear: both;
+  }
+}
+
+@mixin smaller-container {
+  margin: 0 auto;
+  width: $project-page-container-width;
+
+  &:after {
+  	content: "";
+  	display: table;
+  	clear: both;
+  }
 }
 
 
 @mixin clearfix{
+
 	&:after{
-		visibility: hidden;
-		display: block;
-		font-size: 0;
-		content: " ";
+		content: "";
+		display: table;
 		clear: both;
-		height: 0;
 	 }
 }
 

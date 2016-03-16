@@ -13,6 +13,26 @@ style of the project section on the home page
 	}
 }
 
+
+.project-overall {
+
+	@include clearfix;
+	position: relative;
+	margin-bottom: 90px;
+	a {
+		@include clearfix;
+		display: block;
+		filter: grayscale(1);
+		transition: all 0.15s ease-in;
+		&:hover {
+			filter: grayscale(0);
+			opacity: 1;
+			transform: scale(1.02);
+		}
+
+	}
+}
+
 .project-description-container {
 	background-color: $gray-11;
 	padding: 40px;
@@ -86,7 +106,7 @@ style of the project section on the home page
 }
 
 .page-menu {
-	width: $page-container-width;
+	width: $home-page-container-width;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	@include clearfix;
