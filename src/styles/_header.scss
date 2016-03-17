@@ -32,11 +32,10 @@ header {
 	background-image: url(../images/prague-photo2.png);
 	background-size: cover;
 	background-repeat: no-repeat;
-	border-top: $gradient-border-height-px solid;
 	flex: 1;
 
 	/*Page-border style. Sticky style is in _project-section.scss*/
-	&:first-child:before {
+/*	&:first-child:before {
 		content: '';
 		position: absolute;
 		width: 100%;
@@ -44,7 +43,7 @@ header {
 		background: linear-gradient(to right, $branding-blue, $branding-red);
 		top: -$gradient-border-height-px;
 		left: 0;
-	}
+	}*/
 }
 
 .header-content {
@@ -57,16 +56,20 @@ header {
 		text-align: right;
 	}
 
-	.header-name {
-		min-height: 40px;
-		width: 100%;
-		background-image: url(../images/emilytsai.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: right 0px;
-		margin-bottom: 40px;
+}
 
+.header-name {
+	min-height: 40px;
+	width: 100%;
+	background-image: url(../images/emilytsai.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-bottom: 40px;
+
+	&.cover {
+		background-position: right 0px;
 	}
+
 }
 
 .header-menu {
@@ -92,6 +95,15 @@ header {
 
 		}
 	}
+
+	a, a:visited, a:link {
+		&:hover {
+			color: $gray-8;
+			transform: translate(0px,-1px);
+			transition: all 0.1s ease-in-out;
+
+		}
+	}
 }
 
 .header-menu.sticky {
@@ -104,14 +116,6 @@ header {
 	background-color: $header-background;
 /*	transition: all 0.5s ease-in-out;*/
 
-	a, a:visited, a:link {
-		&:hover {
-			color: $gray-8;
-			transform: translate(0px,-1px);
-			transition: all 0.1s ease-in-out;
-
-		}
-	}
 }
 
 .name {

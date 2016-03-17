@@ -95,6 +95,15 @@ style of the project section on the home page
 	line-height: 2;
 }
 
+.page-border {
+	content: '';
+	width: 100%;
+	height: $gradient-border-height-px;
+	background: linear-gradient(to right, $branding-blue, $branding-red);
+	top: -$gradient-border-height-px;
+	left: 0;
+}
+
 .page-border.sticky{
 	top: 0;
 	position: fixed;

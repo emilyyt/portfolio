@@ -1,0 +1,63 @@
+section.work-container {
+	padding-top: 40px;
+
+	h1 {
+		margin: 0;
+		font-size: 12px;
+	}
+
+	h2 {
+		font-size: 20px;
+		text-transform: uppercase;
+		color: $gray-7;
+		margin-bottom: 100px;
+		letter-spacing: 4px
+	}
+	.name {
+		background-position: 0 50%;
+		background-size: 140px;
+		background-image: url(../images/emilytsai-gray.png);
+		height: inherit;
+	}
+
+	ul {
+		padding-right: 0;
+	}
+
+
+	.header-menu {
+		margin-bottom: 70px;
+		a {
+			display: inline-block;
+			flex: 1;
+			height: 100%;
+		}
+	}
+	img {
+		float: right;
+		margin: 30px 0;
+
+		&.top {
+			margin-top: 0;
+		}
+	}
+
+	.work-quote {
+		padding-left: 50px;
+		font-size: 20px;
+		color: $branding-blue;
+		font-weight: 400;
+		font-style: italic;
+		line-height: 1.5;
+		color: $work-quote;
+	}
+	span {
+		font-size: 70px;
+		line-height: 0.45;
+/*		margin-left: -40px;*/
+		font-family: sans-serif;
+		position: relative;
+		top: 11px;
+		left: -8px;
+	}
+}
