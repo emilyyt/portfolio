@@ -37,13 +37,5 @@
   },
   "dependencies": {
     "jquery": "^2.2.1"
-  },
-  "browserify-shim": {
-     "jquery": "$"
-   },
-   "browserify": {
-     "transform": [
-       "browserify-shim"
-     ]
-   }
+  }
 }

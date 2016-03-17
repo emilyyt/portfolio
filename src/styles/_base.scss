@@ -34,6 +34,11 @@ h2 {
 	margin-bottom: 15px;
 }
 
+h3 {
+	font-size: 16px;
+	
+}
+
 .line-container {
 	@include clearfix;
 	margin-bottom: 30px;
@@ -66,7 +71,6 @@ section.work-container {
 
 
 p {
-	font-family: 'Vollkorn', Times, serif;
 	font-size: 16px;
 	color: $gray-5;
 	line-height: 2.6;

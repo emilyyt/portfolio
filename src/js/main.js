@@ -1,9 +1,7 @@
-
-
-var $ = require('jquery');
 var Home = require('./Home.js');
+var Work = require('./Work.js');
 
-var Global = {
+var main = {
 
 	/**
 	 * 
@@ -19,11 +17,9 @@ var Global = {
 	 */
 	attachEventHandlers: function() {
 		var self = this;
-		console.log("Event Handler document dom element: " + $(document));
 		$(document).ready(function(){
 
 			$(window).load(self.onPageLoad);	
-			$('a').click(self.onLinkClick);
 		});	
 	},
 
@@ -35,17 +31,6 @@ var Global = {
 		$(".ajax-loader").fadeOut("slow");
 	},
 
-	/**
-	 * 
-	 */
-	onLinkClick: function() {
-	    var $root = $('html, body');
-	    $root.animate({
-	        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-	    }, 600);
-	    return false;
-	}
-
 };
 
-Global.init();
+main.init();

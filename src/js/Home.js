@@ -1,5 +1,3 @@
-var $ = require('jquery');
-
 
 var Home = {
 
@@ -8,53 +6,38 @@ var Home = {
 	 * off the setInterval for scroll updates.
 	 */
 	init: function() {
+		var self = this;
+
 		$(document).ready(function(){
-			var self = this;
-			console.log("Document in Home: " + $(document)[0]);
+			// click event for the header menu on the home page
+			$('a').click(self.onLinkClick);
+
+			//Variables for the scrolling-dependent effects
 			self.fadeStart = 30;
 			self.$headerContentContainer = $('.header-content-container');
 			self.$headerMenu = $('.header-menu');
-			console.log("fade start: " + self.fadeStart);
-			console.log("Header menu: " + self.$headerMenu);
-			console.log("self: " + self);
-			console.log("Header menu offset:" + self.$headerMenu.offset());
 			self.headerPosition = self.$headerMenu.offset().top;
 			self.$projects = $('.projects');
 			self.projectPosition = self.$projects.offset().top - 300;
 			self.$nameLogo = $('.name');
 			self.$window = $(window);
+
+			self.prevScrollPosition = undefined;
+
+			/**
+			 * Timer for the scroll effects. A performance optimized approach
+			 * instead of the event listener. 
+			 * Scroll position only updates when a change is detected 
+			 */
+
 			setInterval(function(){
 				scrollPosition = self.$window.scrollTop();
-				prevScrollPosition = 0;
 
-				if((scrollPosition !== prevScrollPosition) ||
-					(prevScrollPosition === undefined)) {
-					//NOT SURE WHY but scrollUpdate is not a function?!?!
-					 // self.scrollUpdate(scrollPosition);
-
-					 //Temp solution!
-					 var opacity = 0;
-
-					 // Hasn't yet reached fade start point
-					 if (scrollPosition < self.fadeStart) {
-					 	opacity = 1;
-					 	self.$headerContentContainer.css('opacity', opacity);
-					 } else if (scrollPosition < self.headerPosition) {
-					 	opacity = 1 - (scrollPosition / (self.projectPosition - self.fadeStart));
-					 	self.$headerContentContainer.css('opacity', opacity);
-					 	self.$headerMenu.removeClass('sticky');
-					 	self.$nameLogo.addClass('hide');
-					 } else if (scrollPosition >= self.headerPosition) {
-					 	self.$headerMenu.addClass('sticky');
-					 	self.$nameLogo.removeClass('hide');
-					 }
-
-					 if (scrollPosition >= self.projectPosition - 200) {
-					 	self.$projects.removeClass('hide');
-					 }
-
+				if((scrollPosition !== self.prevScrollPosition) ||
+					(self.prevScrollPosition === undefined)) {
+					 self.scrollUpdate(scrollPosition);
 				}
-				prevScrollPosition = scrollPosition;
+				self.prevScrollPosition = scrollPosition;
 			}, 20);
 		});
 
@@ -69,8 +52,7 @@ var Home = {
 		var self = this;
 
 		var opacity = 0;
-
-		// Hasn't yet reached fade start point
+			
 		if (scrollPosition < self.fadeStart) {
 			opacity = 1;
 			self.$headerContentContainer.css('opacity', opacity);
@@ -87,6 +69,18 @@ var Home = {
 		if (scrollPosition >= self.projectPosition - 200) {
 			self.$projects.removeClass('hide');
 		}
+	},
+
+
+	/**
+	 * Scroll animation function on the fixed header menu
+	 */
+	onLinkClick: function() {
+	    var $root = $('html, body');
+	    $root.animate({
+	        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+	    }, 600);
+	    return false;
 	}
 };
 

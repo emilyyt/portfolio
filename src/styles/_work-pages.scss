@@ -1,5 +1,7 @@
 section.work-container {
-	padding-top: 40px;
+	padding: 40px 0;
+	color: $gray-4;
+
 
 	h1 {
 		margin: 0;
@@ -9,15 +11,59 @@ section.work-container {
 	h2 {
 		font-size: 20px;
 		text-transform: uppercase;
-		color: $gray-7;
-		margin-bottom: 100px;
+		margin-bottom: 80px;
 		letter-spacing: 4px
 	}
+
+	.arrow,  {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		font-family: 'Vollkorn', Times, serif;
+		font-style: italic;
+		font-size: 17px;
+		transition: all 0.2s ease-in-out;
+
+		&.left {
+			left: 20px;
+		}
+		&.right{
+			right: 20px;
+		}
+		svg {
+			fill: $gray-7;
+		}
+
+		a, a:visited, a:link {
+			display: flex;
+			align-items: center;
+			color: $gray-7;
+
+
+			&#dead {
+				color: $gray-10;
+
+				svg {
+					fill: $gray-10;
+					&:hover {
+						fill: $gray-10;
+					}
+				}
+			}
+		}
+
+	}
+
+
 	.name {
-		background-position: 0 50%;
+		background-position: left center;
 		background-size: 140px;
 		background-image: url(../images/emilytsai-gray.png);
 		height: inherit;
+		flex: none;
+		width: 150px;
 	}
 
 	ul {
@@ -27,9 +73,9 @@ section.work-container {
 
 	.header-menu {
 		margin-bottom: 70px;
+		justify-content: space-between;
 		a {
 			display: inline-block;
-			flex: 1;
 			height: 100%;
 		}
 	}
@@ -41,23 +87,44 @@ section.work-container {
 			margin-top: 0;
 		}
 	}
+	.work-content {
+/*		display: flex;
+		align-items: stretch;*/
 
+
+	}
+
+/*	.work-detail {
+		width: 70%;
+		box-sizing: border-box;
+	}*/
 	.work-quote {
-		padding-left: 50px;
-		font-size: 20px;
+		padding: 20px 50px;
+		font-size: 25px;
 		color: $branding-blue;
+		font-family: 'Vollkorn', Times, serif;
 		font-weight: 400;
 		font-style: italic;
 		line-height: 1.5;
 		color: $work-quote;
+/*		width: 30%;
+		box-sizing: border-box;*/
+			span {
+				font-size: 70px;
+				line-height: 0.45;
+		/*		margin-left: -40px;*/
+				position: relative;
+				top: 18px;
+				left: -8px;
+			}
 	}
-	span {
-		font-size: 70px;
-		line-height: 0.45;
-/*		margin-left: -40px;*/
-		font-family: sans-serif;
-		position: relative;
-		top: 11px;
-		left: -8px;
+	
+
+	p {
+		a, a:link, a:visited, a:hover, a:active {
+		  text-decoration: underline;
+		  color: $branding-blue; 
+
+		}
 	}
 }
