@@ -22,7 +22,8 @@ var del = require('del');
 // ========Globals====================
 
 var SRC_PATH = {
-	jsMain: 'src/js/main.js',
+	Workjs: 'src/js/Work.js',
+	Homejs: 'src/js/Home.js',
 	javascript: 'src/js/*.js',
 	styles: 'src/styles/*.scss',
 	images: 'src/images/*'
@@ -60,13 +61,38 @@ var buffer = require('gulp-buffer');
 var plumber = require('gulp-plumber');
 
 
-
-// concat, minify and clean src js files
-gulp.task('scripts', ['clean-js'], function() {
-
+// concat, minify and clean Home.js file
+gulp.task('workScript', ['clean-js'], function() {
 
 
-	return gulp.src([SRC_PATH.jsMain],  {read: false})
+
+	return gulp.src([SRC_PATH.Workjs],  {read: false})
+	// transform file objects using gulp-tap plugin
+    .pipe(tap(function (file) {
+	 
+	   gutil.log('bundling ' + file.path);
+
+	   // replace file contents with browserify's bundle stream
+	   file.contents = browserify(file.path, {debug: true}).bundle();
+
+	 }))
+	 
+	.pipe(buffer())
+	.pipe(plumber())
+	.pipe(sourcemaps.write())
+	.pipe(concat('all.js'))
+	.pipe(gulp.dest(DEST_PATH.javascript))
+	.pipe(rename('bundle.min.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest(DEST_PATH.javascript));
+});
+
+// concat, minify and clean Work.js file
+gulp.task('workScript', ['clean-js'], function() {
+
+
+
+	return gulp.src([SRC_PATH.Workjs],  {read: false})
 	// transform file objects using gulp-tap plugin
     .pipe(tap(function (file) {
 	 
