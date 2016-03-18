@@ -16,17 +16,24 @@ section.work-container {
 	}
 
 	h3 {
-		margin-bottom: 30px;
+		margin: 30px 0px;
 		color: $branding-blue;
 		text-transform: uppercase;
 		letter-spacing: 3px;
 		font-size: 18px;
+		&.top {
+			margin-top: 0;
+		}
 	}
 
 	h4 {
+		margin: 20px 0;
 		font-size: 18px;
 		font-style: italic;
 		color: $branding-red;
+		&.top {
+			margin-top: 0;
+		}
 	}
 
 	.arrow,  {
@@ -35,7 +42,7 @@ section.work-container {
 		bottom: 0;
 		display: flex;
 		align-items: center;
-		font-family: 'Vollkorn', Times, serif;
+		font-family: "athelas",'Vollkorn', Times, serif;
 		font-style: italic;
 		font-size: 17px;
 		transition: all 0.2s ease-in-out;
@@ -109,7 +116,7 @@ section.work-container {
 		padding: 20px 50px;
 		font-size: 25px;
 		color: $branding-blue;
-		font-family: 'Vollkorn', Times, serif;
+		font-family: "athelas",'Vollkorn', Times, serif;
 		font-weight: 400;
 		font-style: italic;
 		line-height: 1.5;
@@ -136,11 +143,52 @@ section.work-container {
 	}
 
 	ol {
+		list-style: decimal;
 		line-height: 2.6;
 		margin-bottom: 50px;
+		margin-left: 50px;
 		span {
 			font-weight: 400;
 		}
 	}
 
+	.tamagotchi-ul {
+		display: flex;
+		justify-content: space-between;
+		li {
+			display: flex;
+			flex-direction: column;
+			height: 160px;
+			background-size: 150px;
+			background-repeat: no-repeat;
+			background-position: center;
+			padding-bottom: 50px;
+			&.snake-icon {
+				background-image: url(../images/tamagotchi-snake.png);
+			}
+			&.microcontroller-icon {
+				background-image: url(../images/tamagotchi-microcontroller.png);
+			}
+			&.tamagotchi-icon {
+				background-image: url(../images/tamagotchi-icon.png);
+			}
+		}
+
+	}
+
+	.arrow-annotation {
+		display: inline-block;
+		position: relative;
+		top: 92px;
+		left: 70px;
+		font-family: "chemist-rough", serif;
+		font-size: 34px;
+		color: $gray-3;
+		#arrow-icon {
+			width: 50px;
+		}
+	}
+	#arrow-paragraph {
+		margin-bottom: -40px;
+	}
 }

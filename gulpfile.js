@@ -62,11 +62,11 @@ var plumber = require('gulp-plumber');
 
 
 // concat, minify and clean Home.js file
-gulp.task('workScript', ['clean-js'], function() {
+gulp.task('homeScript', ['clean-js'], function() {
 
 
 
-	return gulp.src([SRC_PATH.Workjs],  {read: false})
+	return gulp.src([SRC_PATH.Homejs],  {read: false})
 	// transform file objects using gulp-tap plugin
     .pipe(tap(function (file) {
 	 
@@ -80,9 +80,9 @@ gulp.task('workScript', ['clean-js'], function() {
 	.pipe(buffer())
 	.pipe(plumber())
 	.pipe(sourcemaps.write())
-	.pipe(concat('all.js'))
+	.pipe(concat('Home.js'))
 	.pipe(gulp.dest(DEST_PATH.javascript))
-	.pipe(rename('bundle.min.js'))
+	.pipe(rename('home.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest(DEST_PATH.javascript));
 });
@@ -106,9 +106,9 @@ gulp.task('workScript', ['clean-js'], function() {
 	.pipe(buffer())
 	.pipe(plumber())
 	.pipe(sourcemaps.write())
-	.pipe(concat('all.js'))
+	.pipe(concat('Work.js'))
 	.pipe(gulp.dest(DEST_PATH.javascript))
-	.pipe(rename('bundle.min.js'))
+	.pipe(rename('work.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest(DEST_PATH.javascript));
 });
@@ -180,10 +180,23 @@ gulp.task('image', ['clean-images'], function() {
 	.pipe(gulp.dest(DEST_PATH.images));
 });
 
+//============Dev Server==================
+
+var webserver = require('gulp-webserver');
+
+gulp.task('webserver', function() {
+  gulp.src('build')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: true,
+      open: true
+    }));
+});
+
 //=========Watch Tasks====================
 
 gulp.task('watch', function() {
-	gulp.watch(SRC_PATH.javascript, ['lint', 'scripts']);
+	gulp.watch(SRC_PATH.javascript, ['lint', 'homeScript', 'workScript']);
 	gulp.watch(SRC_PATH.styles, ['styles']);
 
 })
@@ -191,6 +204,11 @@ gulp.task('watch', function() {
 gulp.task('default', 
 	['lint', 
 	'styles', 
-	'scripts',
+	'homeScript',
+	'workScript',
 	'image', 
+	'webserver',
 	'watch']);
+
+
+

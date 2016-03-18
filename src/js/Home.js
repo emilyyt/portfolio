@@ -1,14 +1,26 @@
+var Global = require('./Global.js');
+
 
 var Home = {
 
+
+	init: function() {
+		var self = this;
+
+		self.attachEventHandlers();
+		Global.init();
+
+	},
 	/**
 	 * Initialize the Home javascript by defining static variables, and kicking
 	 * off the setInterval for scroll updates.
 	 */
-	init: function() {
+	attachEventHandlers: function() {
 		var self = this;
 
 		$(document).ready(function(){
+
+
 			// click event for the header menu on the home page
 			$('a').click(self.onLinkClick);
 
@@ -84,4 +96,6 @@ var Home = {
 	}
 };
 
-module.exports = Home;
+Home.init();
+
+// module.exports = Home;
