@@ -129,3 +129,30 @@ p {
 	z-index: 9999;
 	background: url(../images/ajax-loader.gif) center no-repeat $header-background;
 }
+
+
+
+/*Gradient border on the top of each page*/
+.page-border {
+	content: '';
+	width: 100%;
+	height: $home-page-gradient-border-height-px;
+	background: linear-gradient(to right, $branding-blue, $branding-red);
+	top: -$home-page-gradient-border-height-px;
+	left: 0;
+
+	&.work {
+		height: $work-page-gradient-border-height-px;
+		top: $work-page-gradient-border-height-px;
+	}
+}
+
+.page-border.sticky{
+	top: 0;
+	position: fixed;
+	height: $home-page-gradient-border-height-px;
+	background: linear-gradient(to right, $branding-blue, $branding-red);
+	width: 100%;
+	z-index: 1000;
+	transition: all 0.5s ease-in-out;
+}
