@@ -159,18 +159,22 @@ section.work-container {
 			display: flex;
 			flex-direction: column;
 			height: 160px;
-			background-size: 150px;
+			width: 100%;
+			text-align: center;
+			background-size: 180px;
 			background-repeat: no-repeat;
 			background-position: center;
 			padding-bottom: 50px;
+			font-weight: 500;
+			color: $gray-6;
 			&.snake-icon {
-				background-image: url(../images/tamagotchi-snake.png);
+				background-image: url(../images/tamagotchi-snake2.png);
 			}
 			&.microcontroller-icon {
-				background-image: url(../images/tamagotchi-microcontroller.png);
+				background-image: url(../images/tamagotchi-microcontroller2.png);
 			}
 			&.tamagotchi-icon {
-				background-image: url(../images/tamagotchi-icon.png);
+				background-image: url(../images/tamagotchi-icon2.png);
 			}
 		}
 
