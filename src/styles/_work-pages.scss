@@ -36,6 +36,19 @@ section.work-container {
 		}
 	}
 
+	ul {
+		font-size: 15px;
+
+/*		li {
+			margin: 20px 0;
+		}*/
+	}
+	.work-content {
+		span {
+			font-weight: 600;
+		}
+	}
+
 	.arrow,  {
 		position: fixed;
 		top: 0;
@@ -85,10 +98,6 @@ section.work-container {
 		height: inherit;
 		flex: none;
 		width: 150px;
-	}
-
-	ul {
-		padding-right: 0;
 	}
 
 
@@ -145,7 +154,7 @@ section.work-container {
 	ol {
 		list-style: decimal;
 		line-height: 2.6;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 		margin-left: 50px;
 		span {
 			font-weight: 400;
@@ -168,13 +177,13 @@ section.work-container {
 			font-weight: 500;
 			color: $gray-6;
 			&.snake-icon {
-				background-image: url(../images/tamagotchi-snake2.png);
+				background-image: url(../images/tamagotchi-snake.png);
 			}
 			&.microcontroller-icon {
-				background-image: url(../images/tamagotchi-microcontroller2.png);
+				background-image: url(../images/tamagotchi-microcontroller.png);
 			}
 			&.tamagotchi-icon {
-				background-image: url(../images/tamagotchi-icon2.png);
+				background-image: url(../images/tamagotchi-icon.png);
 			}
 		}
 
@@ -185,7 +194,7 @@ section.work-container {
 		position: relative;
 		top: 92px;
 		left: 70px;
-		font-family: "chemist-rough", serif;
+		font-family: "chemist-rough", Times, serif;
 		font-size: 34px;
 		color: $gray-3;
 		#arrow-icon {
@@ -196,3 +205,21 @@ section.work-container {
 		margin-bottom: -40px;
 	}
 }
+
+/*Context Styles*/
+.context-ul {
+/*	background-color: $gray-11;*/
+	padding: 30px 50px;
+	line-height: 2.8;
+	
+	li:before {
+		content: '';
+		display: inline-block;
+		background-image: url(../images/context-ul3.svg);
+		height: 18px;
+		width: 18px;
+		margin-right: 5px;
+
+	}
+}
+

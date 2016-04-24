@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://use.typekit.net/qun8xbg.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<link href="styles/style.min.css" media"screen, projection" rel="stylesheet" types="text/css"/>
+		<script src="js/lib/jquery-1.12.1.min.js" type="text/javascript"></script>
+		<script src="js/work.min.js" type="text/javascript"></script>
+
+	</head>
+	<title> Emily Tsai | UX Designer</title>
+	<body>
+		<div class="ajax-loader"></div>
+		<div class="page-border work"></div>
+		<section class="work-container">
+			<div class="right arrow" >
+				<a href="ghc.html">
+					next
+					<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+						<path d="M20 12l-2.83 2.83 9.17 9.17-9.17 9.17 2.83 2.83 12-12z"></path>
+						<path d="M0 0h48v48h-48z" fill="none"></path>
+					</svg>
+				</a>
+			</div>
+			<div class="header-menu">
+				<a href="index.html#projects">
+					<div class="name"></div>
+				</a>
+				<!-- <ul>
+					<li><a href=""> < Prev</a>
+					</li>
+					<li><a href="consulting.html">Next > </a>
+					</li>
+				</ul> -->
+			</div>
+
+			<h1>Context</h1>
+			<h2>A New Social Messenger Concept</h2>
+			<div class="work-content">
+				<div class="work-detail">
+					<img alt="User experiment notes" src="images/context-mockup1.png" width="100%"/>
+					<p>Context is a messenger app that aims to better organize social conversations people have with friends and family. One day, Evan, Brandon and I were discussing common issues we have with today's messaging software and decided to tackle some of these challenges with a new app, which we later named "Context".</p>
+
+					<p> We noticed that messaging apps today more closely mimic the patterns of in-person conversations than it used to. Unlike other pre-existing communcation channels (ie. email, forums, social media posts etc), messaging friends and family is more real-time, raw and candid. With a quick influx of information at a high volume, social conversations are not often designed with the focus around information retrieval at a future time. Thus, we decided to do some research and evaluate the problem space to determine if there truly is a problem to be solved. </p>
+					
+					<div class="work-quote">
+						<span>&#8220;</span>With a quick influx of information at a high volume, social conversations are not often designed with the focus around information retrieval at a future time.  
+					</div>
+
+					<h3>Problem Identification</h3>
+					<p>I initiated our conversation with a brainstorming session of common user concerns with pre-existing messaging apps. 
+					Along the way, we noted down the different scenarios in which such concerns occur.</p>
+					<ul class="context-ul">
+						<li> Repeating the same restaurant recommendations to different people who are visiting</li>
+						<li> Planning / coordinating events with friends and family</li>
+						<li> Referencing recommendations and feedback from others from some time ago such as driving directions to a place or the actual address</li>
+					</ul>
+					<p> These can be summarized with the below major problem areas:
+					</p>
+					<ol>
+						<li>Repetition of the same content to different people can be time-consuming. </li>
+						<li> Searching / referencing back to who, what, when a topic was spoken is challenging (people have bad memory).</li>
+						<li>Information can get lost when users are in a large group chat.</li>
+						<li>Topics seem to change constantly in a conversation thread. However, a lot of social messengers today don't really capture and structure this dynamic well.</li>
+						<li> Chatting online with friends is much closer in behavior to in-person chatting (and less so to emailing or forums), but messenger apps today don't mirror this dynamic very well.
+					</ol>
+
+					<img alt="Finding the problems" src="images/context-problems.png" width="100%"/>
+
+					<h3> Competitive Analysis</h3>
+					<p>Following the problem identification, I looked at a couple popular apps that people use for both social and team collaboration purposes - Facebook Messenger, Slack and Hipchat. Looking at our problems area list, I scored each product in those areas. Of the three products, Slack scored the highest. It is the most versatile messenger app in terms of collaboration tool, but I did still find that it requires some extra discipline to keep organized. Facebook Messenger scored the lowest. However, it does provide that freedom of social exchange without much pressure from the end user to keep the conversations sorted neatly (which Hipchat and Slack both didn't do as well).</p>
+				
+
+					<img alt="Competitive Analysis " src="images/context-competitive.png" width="100%"/>
+
+					<h3>Identifying the Right Solution</h3>
+					<p>Ideally, we want Context to have features such as contextual search and be able to slot certain portions of a conversation together if they are relevant to the same topic. However, before we advance to that level of speech context prediction machine learning capability, we thought to come up with some viable solutions to oversome the user challenges and help us collect useful data patterns around user conversations. </p>
+
+					<img alt="Solution brainstorm " src="images/context-solutions.png" width="100%"/>
+
+					<p> In the image above, the three of us came up with solutions that would answer each of the problem areas we listed earlier and labeled each solution with the problems it does address. I also took some of those solutions and did some rough sketches with them.</p>
+
+					<h3>User Experiment</h3>
+					<p>As I was playing around with different UI's for the final product, I noticed an interesting pattern in people's conversations and conduct an experiment to determine what kinds of information users would like to reference back to. This is what I confirmed: </p>
+					<ol>
+						<li>People repeat the same information to different people, A LOT, but sometimes expressed in various verbiage.</li>
+						<li>In large group conversation, people don't always stay involved 100% of the time but want to know the general idea of the conversation topics.</li>
+						<li> The types of information people would reference back to are majorly: <span>links</span>, <span>tasks</span>, <span>addresses</span>, and occasionally a <span>particularly important topic</span>. </li>
+						<li>Most importantly, users found that the majority of their conversation doesn't need to be saved (approx. 70-80% of the time).</li>
+					</ol>
+					<img alt="User experiment notes" src="images/context-research.png" width="100%"/>
+
+
+					<h3>Wireframing</h3>
+					<p>I began wireframing a couple concepts. The idea of tagging portions of a conversation seems promising. However, it is important to not overburden users with this feature since it may detract from a normal conversation flow. I played around with a couple ways of referencing past conversations into the current one. I also played with various ways of displaying tagged information and how that would play together with the rest of the chat. Here are some wireframes: </p>
+					<img alt="User experiment notes" src="images/context-wireframe.png" width="50%"/>
+					<img alt="User experiment notes" src="images/context-wireframe1.png" width="50%"/><img alt="User experiment notes" src="images/context-wireframe2.png" width="50%"/>
+					<img alt="User experiment notes" src="images/context-wireframe3.png" width="50%"/>
+
+					<h3>Mockups</h3>
+					<p>Finally, I took my favorite concept and created hi-fi mockups with them.</p>
+					<img alt="User experiment notes" src="images/context-mockup1.png" width="100%"/>
+					<img alt="User experiment notes" src="images/context-mockup2.png" width="100%"/>
+					<img alt="User experiment notes" src="images/context-mockup3.png" width="100%"/>
+
+
+
+				</div>
+			</div>
+		</section>
+
+		<div class="contact work">
+			<section class="contact-container">
+				<div class="contact-content"> 
+					<div class="contact-name">
+						Created by Emily Tsai | UX Designer &amp; Developer
+					</div>
+				
+					<div class="line"></div>
+				
+					<div class="contact-icons">
+						<ul>
+							<li><a href="mailto:emily.c.tsai@gmail.com">Email</a></li>
+							<li><a href="http://www.github.com/emilyyt">Github</li>
+							<li><a href="https://www.linkedin.com/in/emily-chu-ying-tsai-64ab9447">LinkedIn</li>
+							<li><a href="https://dribbble.com/emilytsai">Dribbble</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-45120921-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</html>
