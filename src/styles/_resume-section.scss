@@ -64,11 +64,10 @@ styles for resumes are here
 	}
 
 	li {
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 	}
 
 	.resume-date {
-		color: $gray-7;
 		text-transform: uppercase;
 	}
 
@@ -84,7 +83,7 @@ styles for resumes are here
 	.resume-detail {
 		font-weight: 300;
 		color: $gray-1;
-		line-height: 250%;
+		line-height: 200%;
 	}
 
 }
