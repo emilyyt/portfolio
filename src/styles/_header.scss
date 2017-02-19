@@ -9,7 +9,7 @@ header {
 	background-color: $header-background;
 	color: white;
 	display: flex;
-  flex-direction: column;
+    flex-direction: column;
 
   a, a:link, a:visited, a:hover, a:active {
 		font-size: 11px;
@@ -48,12 +48,18 @@ header {
 
 .header-content {
 	position: absolute;
-	bottom: 12%;
+	top: 35%;
 	right: $header-padding-right;
-	width: 30%;
+	width: 40%;
 	float: right;
-	.header-text {
-		text-align: right;
+	.header-text, a, a:link, a:visited, a:active {
+		font-size: 18px;
+		letter-spacing: 0.4px;
+		font-weight: 300;
+
+	}
+	a, a:link, a:visited, a:active {
+		text-decoration: underline;
 	}
 
 }
@@ -67,7 +73,7 @@ header {
 	margin-bottom: 40px;
 
 	&.cover {
-		background-position: right 0px;
+		background-position: 0px;
 	}
 
 }
