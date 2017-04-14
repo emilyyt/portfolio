@@ -18,16 +18,23 @@ style of the project section on the home page
 
 	@include clearfix;
 	position: relative;
-	margin-bottom: 90px;
+	margin-bottom: 100px;
 	a {
 		@include clearfix;
 		display: block;
-		filter: grayscale(1);
-		transition: all 0.15s ease-out;
+		opacity: 1;
+		transform: translate(0,0);
+		transition: all 0.2s ease-out;
 		&:hover {
-			filter: grayscale(0);
-			opacity: 1;
-			transform: scale(1.02);
+			.splash {
+				transform: translateX(0px);
+				box-shadow: 1px 1px 1px rgba(0,0,0,.10);
+			}
+			.project-description-container {
+				transform: translateY(0px);
+				box-shadow: 1px 1px 2px rgba(0,0,0,.10);
+			}
+			
 		}
 
 	}
@@ -36,6 +43,9 @@ style of the project section on the home page
 .project-description-container {
 	background-color: $gray-11;
 	padding: 40px;
+	box-shadow: 1px 2px 2px rgba(0,0,0,.10);
+	transform: translateY(20px);
+	transition: all 0.2s ease-out;
 
 	.project-description-content {
 		display: flex;
@@ -44,6 +54,11 @@ style of the project section on the home page
 		
 		h2, .line-container, description {
 			flex: 1;
+		}
+
+		h2{
+			font-weight: bold;
+			color: $gray-6;
 		}
 	}
 
@@ -66,6 +81,11 @@ style of the project section on the home page
 
 .splash {
 	background-size: cover;
+	box-shadow: 2px 2px 4px rgba(0,0,0,.20);
+	z-index: 99999;
+	position: relative;
+	transform: translateX(3px);
+	transition: all 0.2s ease-out;
 }
 
 .ch-mobile {
@@ -103,7 +123,7 @@ style of the project section on the home page
 
 .description {
 	width: 92%;
-	font-family: 'athelas','Vollkorn', Times, serif;
+/*	font-family: 'athelas','Vollkorn', Times, serif;*/
 	color: $gray-5;
 	line-height: 2;
 }
@@ -140,6 +160,17 @@ style of the project section on the home page
 
 }
 
+.line-container {
+	@include clearfix;
+	margin-bottom: 30px;
+
+	.line {
+		width: 88%;
+		height: 1px;
+		background: linear-gradient(to right,#7ba8ff,#ff9181);
+		float: left;
+	}
+}
 
 .line-decor {
 	border-bottom: 1px solid $gray-6;

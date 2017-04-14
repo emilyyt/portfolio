@@ -39,17 +39,6 @@ h3 {
 	
 }
 
-.line-container {
-	@include clearfix;
-	margin-bottom: 30px;
-
-	.line {
-		width: 20%;
-		height: 4px;
-		background-color: $gray-7;
-		float: left;
-	}
-}
 
 /* Link styling */
 a, a:link, a:visited, a:hover, a:active {
@@ -73,7 +62,7 @@ section.work-container {
 p {
 	font-size: 16px;
 	color: $gray-5;
-	line-height: 2.6;
+	line-height: 2;
 	margin: 25px 0;
 }
 
