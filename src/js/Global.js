@@ -9,7 +9,6 @@ var Global = {
 	init: function() {
 		var self = this;
 		self.attachEventHandlers();
-		// Home.init();
 	},
 
 	/**
@@ -24,15 +23,18 @@ var Global = {
 	},
 
 	/**
-	 * 
+	 * Page loading spinner
 	 */
 	onPageLoad: function() {
 		// Animate loader off screen
 		$(".ajax-loader").fadeOut("slow");
 	},
 
+	lazyload: function() {
+		$(document).ready(function() {
+			$("img.lazy").lazyload();
+		});
+	}
 };
-
-// Global.init();
 
 module.exports = Global;
