@@ -117,7 +117,6 @@ style of the project section on the home page
 
 .description {
 	width: 92%;
-/*	font-family: 'athelas','Vollkorn', Times, serif;*/
 	color: $gray-5;
 	line-height: 2;
 }
@@ -134,8 +133,6 @@ style of the project section on the home page
 		padding: 6px 10px;
 		&:hover {
 			color: $gray-5;
-	/*Transform doesn't work for some reason*/
-			/*transform: translate(0px,-5px);*/
 			transition: all 0.1s ease-in-out;
 		}
 	}

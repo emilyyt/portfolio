@@ -2,7 +2,6 @@ section.work-container {
 	padding: 40px 0;
 	color: $gray-4;
 
-
 	h1 {
 		margin: 0;
 		font-size: 22px;
@@ -56,10 +55,19 @@ section.work-container {
 		bottom: 0;
 		display: flex;
 		align-items: center;
-		font-family: "athelas",'Vollkorn', Times, serif;
-		font-style: italic;
+/*		font-family: "athelas",'Vollkorn', Times, serif;
+		font-style: italic;*/
 		font-size: 17px;
 		transition: all 0.2s ease-in-out;
+
+		&:hover {
+			a, a:visited, a:link {
+				color: $gray-6;
+			}
+			svg{
+				fill: $gray-6;
+			}
+		}
 
 		&.left {
 			left: 20px;
