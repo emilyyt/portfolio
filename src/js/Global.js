@@ -29,7 +29,9 @@ var Global = {
 		// Animate loader off screen
 		$(".ajax-loader").fadeOut("slow");
 	},
-
+	/**
+	 * Lazy Load the images
+	 */
 	lazyload: function() {
 		$(document).ready(function() {
 			$("img.lazy").lazyload();
