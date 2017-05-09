@@ -4,8 +4,6 @@ all the styles for the header on the landing screen is here
 */
 
 header {
-	min-height: 40%;
-	height: 40%;
 	color: $gray-5;
 	display: flex;
     flex-direction: column;
@@ -28,6 +26,7 @@ header {
 	left: 0;
 	font-weight: 200;
 	min-height: calc(100% - 90px);
+	min-height: 300px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	flex: 1;

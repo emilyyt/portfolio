@@ -7,9 +7,9 @@ section.project-container {
 }
 .projects {
 	@include clearfix;
-	width: 100%;
 	opacity: 1;
 	transition: all 0.2s ease-in-out;
+	width: 100%;
 	&.hide {
 		opacity: 0;
 	}
@@ -20,7 +20,10 @@ section.project-container {
 
 	@include clearfix;
 	position: relative;
+	width: $home-page-project-container-width;
 	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
 	a {
 		@include clearfix;
 		display: block;
@@ -130,7 +133,6 @@ section.project-container {
 
 
 .page-menu {
-	width: $home-page-container-width;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	@include clearfix;
