@@ -1,3 +1,6 @@
+section.contact-container {
+	padding-top: 56px;
+}
 .contact {
 	
 	padding-bottom: 45px;
@@ -5,14 +8,14 @@
 	font-size: 13px;
 
 	&.home {
-	background-color: $header-background;
-	color: $gray-8;
+    background-color: $gray-10;
+	color: $gray-6;
 		a, a:visited, a:link {
-			color: $gray-10;
+			color: $gray-6;
 		}
 
 		.line {
-			background-color: $gray-10;
+			background-color: $gray-8;
 		}
 	}	
 

@@ -97,23 +97,15 @@ section.work-container {
 
 	}
 
-
-	.name {
-		background-position: left center;
-		background-size: 140px;
-		background-image: url(../images/emilytsai-gray.png);
-		height: inherit;
-		flex: none;
-		width: 150px;
-	}
-
-
 	.header-menu {
 		margin-bottom: 70px;
 		justify-content: space-between;
 		a {
 			display: inline-block;
 			height: 100%;
+			.header-name {
+				font-size: 30px;
+			}
 		}
 	}
 	img {

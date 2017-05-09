@@ -4,16 +4,16 @@ all the styles for the header on the landing screen is here
 */
 
 header {
-	min-height: 100%;
-	height: 100%;
-	background-color: $header-background;
-	color: white;
+	min-height: 40%;
+	height: 40%;
+	color: $gray-5;
 	display: flex;
     flex-direction: column;
+    background-color: $gray-11;
 
   a, a:link, a:visited, a:hover, a:active {
-		font-size: 11px;
-		color: white;
+		font-size: 14px;
+		color: $gray-6;
 
   	&:hover {
 			color: $gray-8;
@@ -25,38 +25,36 @@ header {
 
 .header-content-container {
 	position: relative;
-	top: 0;
 	left: 0;
 	font-weight: 200;
 	min-height: calc(100% - 90px);
-	background-image: url(../images/prague-photo2.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	flex: 1;
-
-	/*Page-border style. Sticky style is in _project-section.scss*/
-/*	&:first-child:before {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: $gradient-border-height-px;
-		background: linear-gradient(to right, $branding-blue, $branding-red);
-		top: -$gradient-border-height-px;
-		left: 0;
-	}*/
 }
 
 .header-content {
 	position: absolute;
-	top: 35%;
-	right: $header-padding-right;
-	width: 40%;
-	float: right;
-	.header-text, a, a:link, a:visited, a:active {
-		font-size: 18px;
+	top: 15%;
+	width: 355px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	font-size: 14px;
+	letter-spacing: 0.4px;
+	font-weight: 300;
+	.role {
+		font-weight: 400;
+		font-size: 20px;
+		color: $gray-6;
+		padding-bottom: 10%;
+	}
+	a, a:link, a:visited, a:active {
+		font-size: 14px;
 		letter-spacing: 0.4px;
 		font-weight: 300;
-
 	}
 	a, a:link, a:visited, a:active {
 		text-decoration: underline;
@@ -65,35 +63,26 @@ header {
 }
 
 .header-name {
-	min-height: 40px;
-	width: 100%;
-	background-image: url(../images/emilytsai.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	margin-bottom: 40px;
-
-	&.cover {
-		background-position: 0px;
-	}
-
+    font-size: 50px;
+    background: linear-gradient(to right,#7ba8ff,#ff9181);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .header-menu {
 	display: flex;
-/*	flex-flow: column;*/
 	align-items: flex-end;
 	position: relative;
-	height: 80px; /*cover photo is 100% - 90px - 10px of top border*/
+	height: 40px; /*cover photo is 100% - 90px - 10px of top border*/
 	width: 100%;
 
 	ul {
 		display: flex;
 		flex: 1;
 		align-self: stretch;
-		text-transform: uppercase;
+		// text-transform: uppercase;
 		letter-spacing: 3px;
-		padding-right: $header-padding-right;
-		justify-content: flex-end;
+		justify-content: center;
 		li {
 			margin-left: 30px;
 			align-items: center;
@@ -103,12 +92,18 @@ header {
 	}
 
 	a, a:visited, a:link {
+		color: $gray-2;
 		&:hover {
-			color: $gray-8;
+			color: $gray-4;
 			transform: translate(0px,-1px);
 			transition: all 0.1s ease-in-out;
 
 		}
+	}
+
+	&.hide {
+		opacity: 0;
+		height: 0px;
 	}
 }
 
@@ -118,28 +113,23 @@ header {
 	width: 100%;
 	margin: 0 auto;
 	z-index: 1000;
-/*	background-color: rgba(240,238,241, 0.8);*/
-	background-color: $header-background;
+	background-color: $gray-11;
+	opacity: 0.9;
 /*	transition: all 0.5s ease-in-out;*/
 
 }
 
-.name {
-	flex: 1;
-	align-self: stretch;
-	margin-left: 0;
-	background-size: 110px;
-	background-position: $header-padding-right 50%;
-	background-image: url(../images/emilytsai.png);
-	background-repeat: no-repeat;
+// .name {
+// 	flex: 1;
+// 	align-self: stretch;
+// 	margin-left: 0;
+// 	background-size: 110px;
+// 	background-position: $header-padding-right 50%;
+// 	background-image: url(../images/emilytsai.png);
+// 	background-repeat: no-repeat;
 
-	opacity: 1;
-	transform: translateY(0);
-	transition: all 166ms;
-
-	&.hide {
-		opacity: 0;
-		transform: translateY(10px);
-	}
-}
+// 	opacity: 1;
+// 	transform: translateY(0);
+// 	transition: all 166ms;
+// }
 

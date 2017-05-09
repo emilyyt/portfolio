@@ -2,7 +2,9 @@
 
 style of the project section on the home page
 */
-
+section.project-container {
+	width: 100%;
+}
 .projects {
 	@include clearfix;
 	width: 100%;
@@ -18,7 +20,7 @@ style of the project section on the home page
 
 	@include clearfix;
 	position: relative;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	a {
 		@include clearfix;
 		display: block;
@@ -49,7 +51,7 @@ style of the project section on the home page
 		}
 
 		h2{
-			font-weight: bold;
+			font-weight: 400;
 			color: $gray-7;
 		}
 

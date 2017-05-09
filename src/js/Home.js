@@ -31,10 +31,11 @@ var Home = {
 			self.headerPosition = self.$headerMenu.offset().top;
 			self.$projects = $('.projects');
 			self.projectPosition = self.$projects.offset().top - 300;
-			self.$nameLogo = $('.name');
 			self.$window = $(window);
-
 			self.prevScrollPosition = undefined;
+
+			// Hide .header-menu when page is loaded
+			self.$headerMenu.addClass('hide');
 
 			/**
 			 * Timer for the scroll effects. A performance optimized approach
@@ -72,10 +73,10 @@ var Home = {
 			opacity = 1 - (scrollPosition / (self.projectPosition - self.fadeStart));
 			self.$headerContentContainer.css('opacity', opacity);
 			self.$headerMenu.removeClass('sticky');
-			self.$nameLogo.addClass('hide');
+			self.$headerMenu.addClass('hide');
 		} else if (scrollPosition >= self.headerPosition) {
 			self.$headerMenu.addClass('sticky');
-			self.$nameLogo.removeClass('hide');
+			self.$headerMenu.removeClass('hide');
 		}
 
 		if (scrollPosition >= self.projectPosition - 200) {
