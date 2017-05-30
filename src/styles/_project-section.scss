@@ -28,16 +28,16 @@ section.project-container {
 		display: flex;
 		opacity: 1;
 		transform: translate(0,0);
-		transition: all 0.5s ease-out;
+		transition: all 0.2s ease-out;
 		&:hover {
 			opacity: 0.9;
 
-			.splash {
+/*			.splash {
 				background-size: 71%;
 			}
 			.splash.pharmacy {
 				background-size: 97%;
-			}
+			}*/
 			.project-description-container {
 				transform: translateX(-5px);
 			}
@@ -89,7 +89,7 @@ section.project-container {
 }
 
 .splash {
-	background-size: 70%;
+	background-size: 85%;
 	background-repeat: no-repeat;
 	position: relative;
 	transition: all 0.2s ease-out;
@@ -113,11 +113,10 @@ section.project-container {
 .pharmacy {
 	background-image: url(../images/pharmacy-cover.png);
 	background-position: bottom right;
-	background-size: 95%;
 }
 
 .consulting {
-	background-image: url(../images/consulting-cover.png);
+	background-image: url(../images/consulting-beacon-ui.png);
 	background-position: center left;
 }
 
