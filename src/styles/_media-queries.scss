@@ -17,7 +17,7 @@ mobile styles!
   and (orientation: portrait) { 
 
 
-// General and Homepage media queries
+	// General and Homepage media queries
 	body, html {
 		font-size: 15px;
 		-webkit-text-size-adjust:none;
@@ -54,13 +54,30 @@ mobile styles!
 		height: 400px;
 	}
 
+	// Media Queries for resume section
+	.resume-section .resume-content-container {
+		display: block;
+		.resume-content {
+			display: block;
+		}
+	}
+	// Media Queries for contact section
+	section .contact-content {
+		width: 100%;
+	}
 
-// Media Queries for work detail pages
+	// Media Queries for work detail pages
 	section.work-container {
 		width: 100%;
 		h1, h2, .work-content {
 			padding-left: 3vh;
 			padding-right: 3vh;
+			line-height: 1.5;
+			font-size: 24px;
+		}
+
+		h1 {
+			font-size: 18px;
 		}
 
 		.header-menu{
@@ -70,6 +87,10 @@ mobile styles!
 		.arrow {
 			top: 0;
 			bottom: auto;
+		}
+
+		.caption {
+			font-size: 14px;
 		}
 
 	}
