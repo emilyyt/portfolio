@@ -17,9 +17,9 @@ section.project-container {
 
 
 .project-overall {
-
 	@include clearfix;
 	position: relative;
+	min-width: $home-page-project-container-width;
 	a {
 		@include clearfix;
 		width: $home-page-project-container-width;
@@ -55,11 +55,11 @@ section.project-container {
 	}
 
 	&.alternate-style {
-		background-color: $gray-11;
+		background-color: white;
 
 
 		.project-description-container h2 {
-			color: $gray-3;
+			color: $gray-5;
 		}
 	}
 }

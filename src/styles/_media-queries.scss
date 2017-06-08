@@ -18,7 +18,7 @@ mobile styles!
 
 
 	// General and Homepage media queries
-	body, html {
+	body, html, li {
 		font-size: 15px;
 		-webkit-text-size-adjust:none;
 		width: 100%;
@@ -64,6 +64,9 @@ mobile styles!
 	// Media Queries for contact section
 	section .contact-content {
 		width: 100%;
+		.contact-label ul li{
+			width: 100%;
+		}
 	}
 
 	// Media Queries for work detail pages

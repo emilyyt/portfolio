@@ -7,7 +7,6 @@ header {
 	color: $gray-5;
 	display: flex;
     flex-direction: column;
-    background-color: $gray-11;
 
   a, a:link, a:visited, a:hover, a:active {
 		font-size: 14px;
@@ -63,9 +62,11 @@ header {
 
 .header-name {
     font-size: 50px;
-    background: linear-gradient(to right,#7ba8ff,#ff9181);
+    background: linear-gradient(90deg, $branding-blue, $branding-red, $branding-blue, $branding-red);
+    background-size: 200% 200%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    animation: color-animate 8s ease infinite; // color-animate keyframe in base.scss
 }
 
 .header-menu {
