@@ -15,7 +15,6 @@ styles for resumes are here
 	padding: 4px 30px;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-style: italic;
 	font-size: 15px;
 
 }
@@ -44,11 +43,9 @@ styles for resumes are here
 }
 
 .resume-heading {
-	font-family: 'Villkorn', Times, serif;
-	line-height: 1.1;
-	font-style: italic;
-	letter-spacing: 3px;
-	font-size: 21px;
+	text-transform: uppercase;
+	line-height: 1.8;
+	letter-spacing: 2px;
 	font-weight: 400;
 	flex: 1;
 }
