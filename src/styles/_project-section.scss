@@ -13,6 +13,14 @@ section.project-container {
 	&.hide {
 		opacity: 0;
 	}
+	&.alternate-style {
+		background-color: white;
+
+
+		.project-description-container h2 {
+			color: $gray-5;
+		}
+	}
 }
 
 
@@ -31,13 +39,6 @@ section.project-container {
 		transition: all 0.2s ease-out;
 		&:hover {
 			opacity: 0.9;
-
-/*			.splash {
-				background-size: 71%;
-			}
-			.splash.pharmacy {
-				background-size: 97%;
-			}*/
 			.project-description-container {
 				transform: translateX(-5px);
 			}
@@ -54,14 +55,6 @@ section.project-container {
 
 	}
 
-	&.alternate-style {
-		background-color: white;
-
-
-		.project-description-container h2 {
-			color: $gray-5;
-		}
-	}
 }
 
 .project-description-container {

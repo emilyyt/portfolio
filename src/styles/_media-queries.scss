@@ -26,6 +26,10 @@ mobile styles!
 		h1 {
 			font-size: 15px;
 		}
+
+		.project-overall {
+			min-width: inherit;
+		}
 		section, .project-overall a {
 			width: 100%;
 			display: block;
@@ -66,6 +70,7 @@ mobile styles!
 		width: 100%;
 		.contact-label ul li{
 			width: 100%;
+			padding: 0;
 		}
 	}
 
