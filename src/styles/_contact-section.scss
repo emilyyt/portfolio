@@ -1,0 +1,98 @@
+section.contact-container {
+	padding-top: 56px;
+}
+.contact {
+	
+	padding-bottom: 45px;
+	font-weight: 400;
+	font-size: 13px;
+
+	&.home {
+    background-color: $gray-10;
+	color: $gray-6;
+		a, a:visited, a:link {
+			color: $gray-6;
+		}
+
+		.line {
+			background-color: $gray-8;
+		}
+	}	
+
+
+	a, a:visited, a:link {
+		font-size: 10px;
+		text-transform: uppercase;
+		font-weight: 400;
+		&:hover {
+			color: $gray-8;
+			transform: translate(0px,-1px);
+			transition: all 0.1s ease-in-out;
+		}
+	}
+
+	&.work {
+	background-color: $gray-11;
+	color: $gray-7;
+		a, a:visited, a:link {
+			color: $gray-7;
+			&:hover {
+				color: $gray-5;
+			}
+		}
+
+		.line {
+			background-color: $gray-8;
+		}
+	}	
+
+
+	a, a:visited, a:link {
+		font-size: 10px;
+		text-transform: uppercase;
+		font-weight: 400;
+		&:hover {
+			color: $gray-8;
+			transform: translate(0px,-1px);
+			transition: all 0.1s ease-in-out;
+		}
+	}
+
+
+
+	ul {
+
+		margin-top: 30px;
+
+		li {
+			display: inline-block;
+			padding: 0 10px;
+			letter-spacing: 2px;
+		}
+	}
+
+	.line {
+		width: 20%;
+		height: 1px;
+		margin: 0 auto;
+	}
+
+}
+
+
+
+
+.contact-name {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.contact-content {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.contact-label {
+	margin: 0 auto;
+	text-align: center;
+}

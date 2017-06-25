@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+
+# Ignore built files. ** means any number of directories
+**/build/**/*
+
+# Don't ignore gitkeep files
+!.gitkeep

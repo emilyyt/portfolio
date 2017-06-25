@@ -1,0 +1,120 @@
+/*header.scss. 
+
+all the styles for the header on the landing screen is here
+*/
+
+header {
+	background-color: $gray-11;
+	color: $gray-5;
+	display: flex;
+    flex-direction: column;
+
+  a, a:link, a:visited, a:hover, a:active {
+		font-size: 14px;
+		color: $gray-6;
+
+  	&:hover {
+			color: $gray-8;
+			transform: translate(0px,-1px);
+			transition: all 0.1s ease-in-out;
+  	};
+  }
+}
+
+.header-content-container {
+	position: relative;
+	left: 0;
+	font-weight: 200;
+	min-height: 300px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	flex: 1;
+}
+
+.header-content {
+	position: absolute;
+	top: 15%;
+	width: 330px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	font-size: 14px;
+	letter-spacing: 0.4px;
+	font-weight: 300;
+	.role {
+		font-weight: 400;
+		font-size: 20px;
+		color: $gray-6;
+		padding-bottom: 10%;
+	}
+	a, a:link, a:visited, a:active {
+		font-size: 14px;
+		letter-spacing: 0.4px;
+		font-weight: 300;
+	}
+	a, a:link, a:visited, a:active {
+		text-decoration: underline;
+	}
+
+}
+
+.header-name {
+    font-size: 50px;
+    background: linear-gradient(90deg, $branding-blue, $branding-red, $branding-blue, $branding-red);
+    background-size: 200% 200%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: color-animate 8s ease infinite; // color-animate keyframe in base.scss
+}
+
+.header-menu {
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	height: 40px;
+	width: 100%;
+
+	ul {
+		display: flex;
+		flex: 1;
+		align-self: stretch;
+		letter-spacing: 3px;
+		justify-content: center;
+		li {
+			margin-left: 30px;
+			align-items: center;
+			display: flex;
+
+		}
+	}
+
+	a, a:visited, a:link {
+		color: $gray-2;
+		&:hover {
+			color: $gray-4;
+			transform: translate(0px,-1px);
+			transition: all 0.1s ease-in-out;
+
+		}
+	}
+
+	&.hide {
+		opacity: 0;
+		height: 0px;
+	}
+}
+
+.header-menu.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 1000;
+	background-color: $gray-11;
+	opacity: 0.9;
+
+}
+
+

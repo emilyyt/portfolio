@@ -1,0 +1,238 @@
+section.work-container {
+	padding: 40px 0;
+	color: $gray-4;
+
+	h1 {
+		margin: 0;
+		font-size: 22px;
+		font-weight: 600;
+		color: $gray-8;
+	}
+
+	h2 {
+		font-size: 30px;
+		margin-bottom: 80px;
+		letter-spacing: 2px
+	}
+
+	h3 {
+		margin: 30px 0px;
+		color: $branding-blue;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 21px;
+		&.top {
+			margin-top: 0;
+		}
+	}
+
+	h4 {
+		margin: 20px 0;
+		font-size: 18px;
+		font-style: italic;
+		color: $branding-red;
+		&.top {
+			margin-top: 0;
+		}
+	}
+
+	ul {
+		font-size: 15px;
+
+/*		li {
+			margin: 20px 0;
+		}*/
+	}
+	.work-content {
+		span {
+			font-weight: 600;
+		}
+	}
+
+	.arrow,  {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		font-size: 17px;
+		transition: all 0.2s ease-in-out;
+
+		&:hover {
+			a, a:visited, a:link {
+				color: $gray-6;
+			}
+			svg{
+				fill: $gray-6;
+			}
+		}
+
+		&.left {
+			left: 20px;
+		}
+		&.right{
+			right: 20px;
+		}
+		svg {
+			fill: $gray-7;
+		}
+
+		a, a:visited, a:link {
+			display: flex;
+			align-items: center;
+			color: $gray-7;
+
+
+			&#dead {
+				color: $gray-10;
+
+				svg {
+					fill: $gray-10;
+					&:hover {
+						fill: $gray-10;
+					}
+				}
+			}
+		}
+
+	}
+
+	.header-menu {
+		margin-bottom: 70px;
+		justify-content: space-between;
+		a {
+			display: inline-block;
+			height: 100%;
+			.header-name {
+				font-size: 30px;
+			}
+		}
+	}
+	img {
+		float: right;
+		margin: 20px 0 40px 0;
+
+		&.top {
+			margin-top: 0;
+		}
+	}
+
+	img.small-image {
+		margin-left: 30px;
+	}
+	.work-quote {
+		padding: 20px 50px;
+		font-size: 25px;
+		color: $branding-blue;
+		font-family: "athelas",'Vollkorn', Times, serif;
+		font-weight: 400;
+		font-style: italic;
+		line-height: 1.5;
+		color: $work-quote;
+/*		width: 30%;
+		box-sizing: border-box;*/
+			span {
+				font-size: 70px;
+				line-height: 0.45;
+		/*		margin-left: -40px;*/
+				position: relative;
+				top: 18px;
+				left: -8px;
+			}
+	}
+	
+
+	p {
+		a, a:link, a:visited, a:hover, a:active {
+		  text-decoration: underline;
+		  color: $branding-blue; 
+
+		}
+	}
+
+	ol {
+		list-style: decimal;
+		line-height: 2.6;
+		margin-bottom: 20px;
+		margin-left: 50px;
+		span {
+			font-weight: 400;
+		}
+	}
+
+	.caption {
+		font-style: italic;
+	}
+
+	.tamagotchi-ul {
+		display: flex;
+		justify-content: space-between;
+		li {
+			display: flex;
+			flex-direction: column;
+			height: 160px;
+			width: 100%;
+			text-align: center;
+			background-size: 180px;
+			background-repeat: no-repeat;
+			background-position: center;
+			padding-bottom: 50px;
+			font-weight: 500;
+			color: $gray-6;
+			&.snake-icon {
+				background-image: url(../images/tamagotchi-snake.png);
+			}
+			&.microcontroller-icon {
+				background-image: url(../images/tamagotchi-microcontroller.png);
+			}
+			&.tamagotchi-icon {
+				background-image: url(../images/tamagotchi-icon.png);
+			}
+		}
+
+	}
+
+	.arrow-annotation {
+		display: inline-block;
+		position: relative;
+		top: 92px;
+		left: 70px;
+		font-family: "chemist-rough", Times, serif;
+		font-size: 34px;
+		color: $gray-3;
+		#arrow-icon {
+			width: 50px;
+		}
+	}
+	#arrow-paragraph {
+		margin-bottom: -40px;
+	}
+}
+
+/*Prototype Videos*/
+.prototype-video {
+	text-align: center;
+	margin-bottom: 40px;
+	video {
+		margin-top: 20px;
+	}
+
+}
+
+/*Context Styles*/
+.context-ul {
+/*	background-color: $gray-11;*/
+	padding: 30px 50px;
+	line-height: 2.8;
+	
+	li:before {
+		content: '';
+		display: inline-block;
+		background-image: url(../images/context-ul3.svg);
+		height: 18px;
+		width: 18px;
+		margin-right: 5px;
+
+	}
+}
+
