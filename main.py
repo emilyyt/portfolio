@@ -13,14 +13,48 @@
 # limitations under the License.
 
 import webapp2
+import jinja2
+import os
 
+PROJECT_DIR = os.path.dirname(__file__)
+TEMPLATE_DIR = os.path.join(PROJECT_DIR, "templates")
 
-class MainPage(webapp2.RequestHandler):
+JINJA_ENVIRONMENT = jinja2.Environment(
+	loader=jinja2.FileSystemLoader(TEMPLATE_DIR),
+	extensions=["jinja2.ext.autoescape"],
+	autoescape=True)
+
+class HomePage(webapp2.RequestHandler):
     def get(self):
-        self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('Hello, World!')
+        template = JINJA_ENVIRONMENT.get_template("home.html")
+        self.response.write(template.render())
 
+class ProjectPage(webapp2.RequestHandler):
+	def post(self, name):
+		if self.request.get('pw') == 'dilloniscute':
+			try:
+				template = JINJA_ENVIRONMENT.get_template(name + ".html")
+				self.response.write(template.render())
+			except jinja2.TemplateNotFound:
+				self.response.write("Not Found!!! :(:(:(")
+				self.response.set_status(404)
+		else:
+			self.response.write("""
+				<form method="post">
+					<input type="password" name="pw"/>
+					<input type="submit" value="Login"/>
+				</form>
+				""")
+
+	def get(self, name):
+		self.response.write("""
+				<form method="post">
+					<input type="password" name="pw"/>
+					<input type="submit" value="Login"/>
+				</form>
+				""")
 
 app = webapp2.WSGIApplication([
-    ('/', MainPage),
+    webapp2.Route('/', handler=HomePage), 
+    webapp2.Route('/project/<name>', handler=ProjectPage),
 ], debug=True)

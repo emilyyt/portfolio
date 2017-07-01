@@ -2,8 +2,14 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+
 skip_files: 
- - ^.*node_modules(/.*)?
+- ^.*node_modules(/.*)?
 
 handlers:
 
@@ -11,5 +17,4 @@ handlers:
   static_dir: static 
 
 - url: /.*
-  static_files: static/index.html
-  upload: static/index.html
+  script: main.app
