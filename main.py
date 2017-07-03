@@ -30,10 +30,15 @@ class HomePage(webapp2.RequestHandler):
         self.response.write(template.render())
 
 class ProjectPage(webapp2.RequestHandler):
-	def post(self, name):
+	def post(self, project, subproject=None):
+		print "project " + project
+		print "subproject " + subproject if subproject is not None else ''
 		if self.request.get('pw') == 'emilyport':
 			try:
-				template = JINJA_ENVIRONMENT.get_template(name + ".html")
+				template_name = (os.path.join(project, subproject) 
+				  if subproject is not None 
+				  else project)
+				template = JINJA_ENVIRONMENT.get_template(template_name + ".html")
 				self.response.write(template.render())
 			except jinja2.TemplateNotFound:
 				self.response.write("Not Found!!! :(:(:(")
@@ -46,25 +51,24 @@ class ProjectPage(webapp2.RequestHandler):
 				</form>
 				""")
 
-	def get(self, name):
+	def get(self, project, subproject=None):
 		self.response.write("""
 				<form method="post">
 					<input type="password" name="pw"/>
 					<input type="submit" value="Login"/>
 				</form>
 				""")
-		
-class SubProjectPage(webapp2.RequestHandler):
-	def get(self, name, subproject):
-		try:
-			template = JINJA_ENVIRONMENT.get_template(name + "/" + subproject + ".html")
-			self.response.write(template.render())
-		except jinja2.TemplateNotFound:
-				self.response.write("Not Found!!! :(:(:(")
-				self.response.set_status(404)
+# class SubProjectPage(webapp2.RequestHandler):
+# 	def get(self, name, subproject):
+# 		try:
+# 			template = JINJA_ENVIRONMENT.get_template(name + "/" + subproject + ".html")
+# 			self.response.write(template.render())
+# 		except jinja2.TemplateNotFound:
+# 				self.response.write("Not Found!!! :(:(:(")
+# 				self.response.set_status(404)
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', handler=HomePage), 
-    webapp2.Route('/project/<name>', handler=ProjectPage),
-    webapp2.Route('/project/<name>/<subproject>', handler=SubProjectPage),
+    webapp2.Route('/project/<project>', handler=ProjectPage),
+    webapp2.Route('/project/<project>/<subproject>', handler=ProjectPage),
 ], debug=True)
