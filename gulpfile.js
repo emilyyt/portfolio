@@ -30,9 +30,9 @@ var SRC_PATH = {
 }
 
 var DEST_PATH = {
-	javascript: 'build/js',
-	styles: 'build/styles',
-	images: 'build/images'
+	javascript: 'static/build/js',
+	styles: 'static/build/styles',
+	images: 'static/build/images'
 }
 
 // =========JS Tasks===================
@@ -180,19 +180,6 @@ gulp.task('image', ['clean-images'], function() {
 	.pipe(gulp.dest(DEST_PATH.images));
 });
 
-//============Dev Server==================
-
-var webserver = require('gulp-webserver');
-
-gulp.task('webserver', function() {
-  gulp.src('build')
-    .pipe(webserver({
-      livereload: true,
-      directoryListing: true,
-      open: true
-    }));
-});
-
 //=========Watch Tasks====================
 
 gulp.task('watch', function() {
@@ -207,7 +194,6 @@ gulp.task('default',
 	'homeScript',
 	'workScript',
 	'image', 
-	'webserver',
 	'watch']);
 
 

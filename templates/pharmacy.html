@@ -1,0 +1,42 @@
+{% extends "projectBase.html" %}
+
+{% block content %}
+<h1>PwC Consulting</h1>
+<h2>Pharmacy App for a Healthcare Giant</h2>
+<div class="work-content">
+	<div class="work-detail">
+		<p>While I was at PwC, I worked for a healthcare client to build an iOS and Android mobile experience that allows patients to order their prescriptions to their home or for pickup at a pharmacy.</p>
+		<div class="caption">Final product design</div>
+		<img class="lazy" data-original="../static/build/images/pharmacy-v2-mockups-1.png" alt="v2 mockups" width="100%"/>
+		<h3>Background</h3>
+		<p>Our client is the one of the largest healthcare provider and payer in California and my PwC team was contracted to work on several features on their patient-facing app. We had, at that point worked on projects such as a patient skincare reporting feature and app localization into Spanish. I was assigned to project manage a team of 15 developers and testers, plus work with the client to ensure that all business requirements were met. Additionally, I was the only UX consultant on the team, so I picked up all design tasks that was assigned to the PwC team. Below is a diagram that illustrates how a patient user would interact with the care providers through the application. The three main feature channels are: Appointment, Messages, and Pharmacy.</p> 
+
+		<img class="top" src="../static/build/images/pharmacy-v2-diagram.png" alt="App Ecosystem" width="100%"/>
+		<p>The client’s next project for us was to implement their pharmacy prescription order system on Android and iOS. The existing pharmacy feature was written entirely in html/css/js and ported onto the app through webviews. The user experience was suboptimal partly because the UI was outdated; the code was very old and had a legacy backend, which caused a toll on performance. Overall, it was not scalable for new-and-coming features that the client wants to build. A redesign was long overdue.</p>
+
+		<h4>Pharmacy v.1</h4>
+		<p>The overall app is several years old with a well-defined design styleguide created by the clients’ design team. The project seemed straightforward and my team was very excited to delve into the weeds and begin implementation. I collaborated with the client design team and iterated on designs for several weeks to ensure we were legally compliant and fully incorporates stakeholders' feedback. </p>
+		<div class="caption">Some process work</div>
+		<img class="lazy" data-original="../static/build/images/pharmacy-v1-drawing.png" alt="v1 Process Work" width="100%"/>
+		<p> It was not until the middle the project that we realized our business requirements were not fully captured and the backend we were dealing with was much more complex than we had anticipated. It was too late to redo the designs at this point because we had to move forward in order to stay within our committed timeline. </p>
+		<div class="caption">Version 1 of the designs</div>
+		<img class="lazy" data-original="../static/build/images/pharmacy-v1-mockups.png" alt="v1 mockups" width="100%"/>
+
+		<h4>Pharmacy v2.0</h4>
+		<p>I decided to tackle the challenge independently in my own time. When I had full visibility into the business requirements, I decided to do a second redesign on my own. </p>
+		<img class="lazy" data-original="../static/build/images/pharmacy-v2-drawing.png" alt="v2 drawing" width="100%"/>
+		<div class="caption">The screen flow of my designs. Depending on whether users select "Delivery" or "Pickup", their experience will differ.</div>
+		<img class="lazy" data-original="../static/build/images/pharmacy-v2-flow.png" alt="v2 drawing" width="100%"/>
+		<p>In summary, the patient has the option to decide if they would like to pick up the prescription in a facility or get it mail-ordered to their home. Depending on their selection, the experience with Pharmacy would differ, since in-store payment is required for pick-up orders. Additionally, not all facilities support mail-order, and this would be something addressed in the backend.</p>
+		<div class="caption">Both flows start with the same prescription selection</div>
+		<img class="lazy" data-original="../static/build/images/pharmacy-v2-mockups-1.png" alt="v2 mockups" width="100%"/>
+		<div class="caption">Prescription delivery flow</div>
+		<img class="lazy" data-original="../static/build/images/pharmacy-v2-mockups-2.png" alt="v2 mockups" width="100%"/>
+		<div class="caption">Prescription pick-up flow</div>
+		<img class="lazy" data-original="../static/build/images/pharmacy-v2-mockups-3.png" alt="v2 mockups" width="100%"/>
+		<p>My design was showcased during a presentation to my client and the client was extremely happy with this new design!</p>
+		<div class="caption">A screenshot of my Sketch artboards</div>
+		<img class="lazy" data-original="../static/build/images/pharmacy-v2-iterations.png" alt="v2 mockups" width="100%"/>
+	</div>
+</div>
+{% endblock %}

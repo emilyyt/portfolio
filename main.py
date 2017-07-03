@@ -31,7 +31,7 @@ class HomePage(webapp2.RequestHandler):
 
 class ProjectPage(webapp2.RequestHandler):
 	def post(self, name):
-		if self.request.get('pw') == 'dilloniscute':
+		if self.request.get('pw') == 'emilyport':
 			try:
 				template = JINJA_ENVIRONMENT.get_template(name + ".html")
 				self.response.write(template.render())

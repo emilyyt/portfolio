@@ -1,6 +1,6 @@
 {
-  "name": "portfolio-gulp",
-  "version": "1.0.0",
+  "name": "emily-portfolio",
+  "version": "2.0.0",
   "description": "portfolio site with gulp",
   "main": "index.js",
   "scripts": {
@@ -38,5 +38,9 @@
   },
   "dependencies": {
     "jquery": "^2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://source.developers.google.com/p/emily-portfolio/r/default"
   }
 }
