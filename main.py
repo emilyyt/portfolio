@@ -53,8 +53,18 @@ class ProjectPage(webapp2.RequestHandler):
 					<input type="submit" value="Login"/>
 				</form>
 				""")
+		
+class SubProjectPage(webapp2.RequestHandler):
+	def get(self, name, subproject):
+		try:
+			template = JINJA_ENVIRONMENT.get_template(name + "/" + subproject + ".html")
+			self.response.write(template.render())
+		except jinja2.TemplateNotFound:
+				self.response.write("Not Found!!! :(:(:(")
+				self.response.set_status(404)
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', handler=HomePage), 
     webapp2.Route('/project/<name>', handler=ProjectPage),
+    webapp2.Route('/project/<name>/<subproject>', handler=SubProjectPage),
 ], debug=True)
