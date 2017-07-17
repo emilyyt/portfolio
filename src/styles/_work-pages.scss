@@ -17,9 +17,8 @@ section.work-container {
 
 	h3 {
 		margin: 30px 0px;
-		color: $branding-blue;
-		text-transform: uppercase;
-		letter-spacing: 3px;
+		color: $branding-red;
+		font-weight: 400;
 		font-size: 21px;
 		&.top {
 			margin-top: 0;
@@ -30,7 +29,7 @@ section.work-container {
 		margin: 20px 0;
 		font-size: 18px;
 		font-style: italic;
-		color: $branding-red;
+		color: $gray-8;
 		&.top {
 			margin-top: 0;
 		}
@@ -157,6 +156,44 @@ section.work-container {
 		margin-left: 50px;
 		span {
 			font-weight: 400;
+		}
+	}
+
+	.subproject-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.subproject-link {
+		color: $branding-blue;
+		font-size: 18px;
+		line-height: 40px;
+
+		&:hover {
+			text-decoration: underline;
+
+			.subproject-image, .subproject-title {
+				opacity: 0.9;
+				transition: all 0.2s ease-in-out;	
+			}
+		}
+
+		.subproject-image {
+			height: 204px;
+
+			img {
+				margin: 0;
+				float: none;
+			}
+		}
+
+		.subproject-title {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 50px;
+			background-color: $gray-11;
 		}
 	}
 

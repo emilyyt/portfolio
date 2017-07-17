@@ -2,11 +2,11 @@
 
 style of the project section on the home page
 */
-section.project-container {
+section.project-section-container {
 	width: 100%;
 	background-color: $gray-11;
 }
-.projects {
+.project {
 	@include clearfix;
 	opacity: 1;
 	transition: all 0.2s ease-in-out;
@@ -25,11 +25,12 @@ section.project-container {
 }
 
 
-.project-overall {
+.project-outer-container {
 	@include clearfix;
 	position: relative;
 	min-width: $home-page-project-container-width;
-	a {
+
+	.project-inner-container {
 		@include clearfix;
 		width: $home-page-project-container-width;
 		margin-left: auto;
@@ -38,7 +39,14 @@ section.project-container {
 		opacity: 1;
 		transform: translate(0,0);
 		transition: all 0.2s ease-out;
-		&:hover {
+
+		&.reverse-order {
+			flex-direction: row-reverse;
+		}
+
+	}
+
+	a:hover {
 			opacity: 0.9;
 			.project-description-container {
 				transform: translateX(-5px);
@@ -49,12 +57,6 @@ section.project-container {
 			}
 
 		}
-
-		&.reverse-order {
-			flex-direction: row-reverse;
-		}
-
-	}
 
 }
 
@@ -75,9 +77,25 @@ section.project-container {
 
 		.logo {
 			height: 10%;
-			margin-bottom: 20px;
+			margin-bottom: 0px;
 		}
 
+	}
+	.subprojects {
+		margin-top: 10px;
+		li {
+			margin-bottom: 5px;
+		}
+		 a {
+			font-size: 16px;
+			color: $branding-blue;
+			padding: 0;
+			transition: all 0.2s ease-in-out;
+
+			&:hover {
+				padding: 5px;
+			}
+		}
 	}
 
 }
@@ -186,3 +204,4 @@ section.project-container {
 	border-bottom: 1px solid $gray-6;
 	width: 10%;
 }
+
