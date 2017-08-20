@@ -258,7 +258,6 @@ section.work-container {
 
 /*Context Styles*/
 .context-ul {
-/*	background-color: $gray-11;*/
 	padding: 30px 50px;
 	line-height: 2.8;
 	
@@ -270,6 +269,48 @@ section.work-container {
 		width: 18px;
 		margin-right: 5px;
 
+	}
+}
+
+/*Navigation Redesign*/
+
+.ch-vs-students {
+	display: flex;
+	text-align: center;
+	justify-content: space-around;
+	color: white;
+	padding-bottom: 40px;
+	ul {
+		padding: 10px 20px;
+		flex: 1;
+	}
+	.ch-goal {
+		background-color: $ch-secondary;
+	}
+
+	.student-goal {
+		background-color: $ch-primary;
+	}
+
+	.goal-heading {
+		padding-top: 5px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 600;
+	}
+
+	.goal-description {
+		padding-bottom: 10px;
+		border-bottom: 1px solid rgba(255,255,255,0.3);
+	}
+
+	.action-heading {
+		padding-top: 10px;
+	}
+
+	.action-description {
+		font-style: italic;
+		letter-spacing: 0.3px;
 	}
 }
 
