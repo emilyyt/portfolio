@@ -3,207 +3,207 @@
 style of the project section on the home page
 */
 section.project-section-container {
-	width: 100%;
-	background-color: $gray-11;
+    width: 100%;
+    background-color: $gray-11;
 }
 .project {
-	@include clearfix;
-	opacity: 1;
-	transition: all 0.2s ease-in-out;
-	width: 100%;
-	&.hide {
-		opacity: 0;
-	}
-	&.alternate-style {
-		background-color: white;
+    @include clearfix;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    &.hide {
+        opacity: 0;
+    }
+    &.alternate-style {
+        background-color: white;
 
 
-		.project-description-container h2 {
-			color: $gray-5;
-		}
-	}
+        .project-description-container h2 {
+            color: $gray-5;
+        }
+    }
 }
 
 
 .project-outer-container {
-	@include clearfix;
-	position: relative;
-	min-width: $home-page-project-container-width;
+    @include clearfix;
+    position: relative;
+    min-width: $home-page-project-container-width;
 
-	.project-inner-container {
-		@include clearfix;
-		width: $home-page-project-container-width;
-		margin-left: auto;
-		margin-right: auto;
-		display: flex;
-		opacity: 1;
-		transform: translate(0,0);
-		transition: all 0.2s ease-out;
+    .project-inner-container {
+        @include clearfix;
+        width: $home-page-project-container-width;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        opacity: 1;
+        transform: translate(0,0);
+        transition: all 0.2s ease-out;
 
-		&.reverse-order {
-			flex-direction: row-reverse;
-		}
+        &.reverse-order {
+            flex-direction: row-reverse;
+        }
 
-	}
+    }
 
-	a:hover {
-			opacity: 0.9;
-			.project-description-container {
-				transform: translateX(-5px);
-			}
+    a:hover {
+            opacity: 0.9;
+            .project-description-container {
+                transform: translateX(-5px);
+            }
 
-			&.reverse-order .project-description-container {
-				transform: translateX(5px);
-			}
+            &.reverse-order .project-description-container {
+                transform: translateX(5px);
+            }
 
-		}
+        }
 
 }
 
 .project-description-container {
-	transition: all 0.2s ease-out;
-	display: flex;
+    transition: all 0.2s ease-out;
+    display: flex;
 
-	.project-description-content {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;		
+    .project-description-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
 
-		h2 {
-			font-weight: bold;
-			color: $gray-5;
-			font-size: 30px;
-		}
+        h2 {
+            font-weight: bold;
+            color: $gray-5;
+            font-size: 30px;
+        }
 
-		.logo {
-			height: 10%;
-			margin-bottom: 0px;
-		}
+        .logo {
+            height: 10%;
+            margin-bottom: 0px;
+        }
 
-	}
-	.subprojects {
-		margin-top: 10px;
-		li {
-			margin-bottom: 5px;
-		}
-		 a {
-			font-size: 16px;
-			font-weight: 400;
-			color: $branding-blue;
-			padding: 0;
-			transition: all 0.2s ease-in-out;
+    }
+    .subprojects {
+        margin-top: 10px;
+        li {
+            margin-bottom: 5px;
+        }
+         a {
+            font-size: 16px;
+            font-weight: 400;
+            color: $branding-blue;
+            padding: 0;
+            transition: all 0.2s ease-in-out;
 
-			&:hover {
-				padding: 5px;
-				color: $gray-6;
-			}
-		}
-	}
+            &:hover {
+                padding: 5px;
+                color: $gray-6;
+            }
+        }
+    }
 
 }
 
 .splash {
-	background-size: 100%;
-	background-repeat: no-repeat;
-	position: relative;
-	transition: all 0.2s ease-out;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 0.2s ease-out;
 }
 
 .ch-mobile {
-	background-image: url(../images/ch-cover.png);
-	background-size: 532px;
-	background-position: bottom left;
+    background-image: url(../images/ch-cover.png);
+    background-size: 532px;
+    background-position: bottom left;
 }
 
 .stockpile {
-	background-image: url(../images/stockpile-cover.png);
-	background-position: bottom right;
+    background-image: url(../images/stockpile-cover.png);
+    background-position: bottom right;
 }
 
 .grace-hopper {
-	background-image: url(../images/ghc-cover.png);
-	background-position: center left;
-	margin-right: 60px;
+    background-image: url(../images/ghc-cover.png);
+    background-position: center left;
+    margin-right: 60px;
 }
 
 .pharmacy {
-	background-image: url(../images/pharmacy-cover.png);
-	background-size: 532px;
-	background-position: bottom right;
+    background-image: url(../images/pharmacy-cover.png);
+    background-size: 532px;
+    background-position: bottom right;
 }
 
 .consulting {
-	background-image: url(../images/consulting-beacon-ui.png);
-	background-position: center left;
-	margin-right: 60px;
+    background-image: url(../images/consulting-beacon-ui.png);
+    background-position: center left;
+    margin-right: 60px;
 }
 
 .ecotouch {
-	background-image: url(../images/ecotouch-leaf.jpg);
+    background-image: url(../images/ecotouch-leaf.jpg);
 }
 
 .tamagotchi {
-	background-image: url(../images/tamagotchi.png);
+    background-image: url(../images/tamagotchi.png);
 }
 
 .tsa {
-	background-image: url(../images/booth.jpg);
+    background-image: url(../images/booth.jpg);
 }
 
 .context {
-	background-image: url(../images/context-mockup1.png);
-	background-position: 50% 23%;
+    background-image: url(../images/context-mockup1.png);
+    background-position: 50% 23%;
 }
 
 .description {
-	width: 92%;
-	color: $gray-5;
-	line-height: 2;
+    width: 92%;
+    color: $gray-5;
+    line-height: 2;
 }
 
 
 .page-menu {
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	@include clearfix;
-	a, a:visited, a:link {
-		border-bottom: 1px solid transparent;
-		background-color: #f0eef1;
-		padding: 6px 10px;
-		&:hover {
-			color: $gray-5;
-			transition: all 0.1s ease-in-out;
-		}
-	}
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    @include clearfix;
+    a, a:visited, a:link {
+        border-bottom: 1px solid transparent;
+        background-color: #f0eef1;
+        padding: 6px 10px;
+        &:hover {
+            color: $gray-5;
+            transition: all 0.1s ease-in-out;
+        }
+    }
 
 
-	ul {
-		float: right;
-		display: block;
-		li{
-			display: inline-block;
-			margin-left: 30px;
-		}
-	}
+    ul {
+        float: right;
+        display: block;
+        li{
+            display: inline-block;
+            margin-left: 30px;
+        }
+    }
 
 
 
 }
 
 .line-container {
-	@include clearfix;
-	margin-bottom: 30px;
+    @include clearfix;
+    margin-bottom: 30px;
 
-	.line {
-		width: 88%;
-		height: 1px;
-		background: linear-gradient(to right,#7ba8ff,#ff9181);
-		float: left;
-	}
+    .line {
+        width: 88%;
+        height: 1px;
+        background: linear-gradient(to right,#7ba8ff,#ff9181);
+        float: left;
+    }
 }
 
 .line-decor {
-	border-bottom: 1px solid $gray-6;
-	width: 10%;
+    border-bottom: 1px solid $gray-6;
+    width: 10%;
 }
 

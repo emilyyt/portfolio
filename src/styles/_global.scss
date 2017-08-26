@@ -45,9 +45,9 @@ $ch-secondary: #e00099;
   width: $home-page-project-container-width;
 
   &:after {
-  	content: "";
-  	display: table;
-  	clear: both;
+      content: "";
+      display: table;
+      clear: both;
   }
 }
 
@@ -56,19 +56,19 @@ $ch-secondary: #e00099;
   width: $project-page-container-width;
 
   &:after {
-  	content: "";
-  	display: table;
-  	clear: both;
+      content: "";
+      display: table;
+      clear: both;
   }
 }
 
 
 @mixin clearfix{
 
-	&:after{
-		content: "";
-		display: table;
-		clear: both;
-	 }
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+     }
 }
 

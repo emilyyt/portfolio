@@ -22,17 +22,17 @@ var del = require('del');
 // ========Globals====================
 
 var SRC_PATH = {
-	Workjs: 'src/js/Work.js',
-	Homejs: 'src/js/Home.js',
-	javascript: 'src/js/*.js',
-	styles: 'src/styles/*.scss',
-	images: 'src/images/*'
+    Workjs: 'src/js/Work.js',
+    Homejs: 'src/js/Home.js',
+    javascript: 'src/js/*.js',
+    styles: 'src/styles/*.scss',
+    images: 'src/images/*'
 }
 
 var DEST_PATH = {
-	javascript: 'static/build/js',
-	styles: 'static/build/styles',
-	images: 'static/build/images'
+    javascript: 'static/build/js',
+    styles: 'static/build/styles',
+    images: 'static/build/images'
 }
 
 // =========JS Tasks===================
@@ -66,25 +66,25 @@ gulp.task('homeScript', ['clean-js'], function() {
 
 
 
-	return gulp.src([SRC_PATH.Homejs],  {read: false})
-	// transform file objects using gulp-tap plugin
+    return gulp.src([SRC_PATH.Homejs],  {read: false})
+    // transform file objects using gulp-tap plugin
     .pipe(tap(function (file) {
-	 
-	   gutil.log('bundling ' + file.path);
+     
+       gutil.log('bundling ' + file.path);
 
-	   // replace file contents with browserify's bundle stream
-	   file.contents = browserify(file.path, {debug: true}).bundle();
+       // replace file contents with browserify's bundle stream
+       file.contents = browserify(file.path, {debug: true}).bundle();
 
-	 }))
-	 
-	.pipe(buffer())
-	.pipe(plumber())
-	.pipe(sourcemaps.write())
-	.pipe(concat('Home.js'))
-	.pipe(gulp.dest(DEST_PATH.javascript))
-	.pipe(rename('home.min.js'))
-	.pipe(uglify())
-	.pipe(gulp.dest(DEST_PATH.javascript));
+     }))
+     
+    .pipe(buffer())
+    .pipe(plumber())
+    .pipe(sourcemaps.write())
+    .pipe(concat('Home.js'))
+    .pipe(gulp.dest(DEST_PATH.javascript))
+    .pipe(rename('home.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(DEST_PATH.javascript));
 });
 
 // concat, minify and clean Work.js file
@@ -92,37 +92,37 @@ gulp.task('workScript', ['clean-js'], function() {
 
 
 
-	return gulp.src([SRC_PATH.Workjs],  {read: false})
-	// transform file objects using gulp-tap plugin
+    return gulp.src([SRC_PATH.Workjs],  {read: false})
+    // transform file objects using gulp-tap plugin
     .pipe(tap(function (file) {
-	 
-	   gutil.log('bundling ' + file.path);
+     
+       gutil.log('bundling ' + file.path);
 
-	   // replace file contents with browserify's bundle stream
-	   file.contents = browserify(file.path, {debug: true}).bundle();
+       // replace file contents with browserify's bundle stream
+       file.contents = browserify(file.path, {debug: true}).bundle();
 
-	 }))
-	 
-	.pipe(buffer())
-	.pipe(plumber())
-	.pipe(sourcemaps.write())
-	.pipe(concat('Work.js'))
-	.pipe(gulp.dest(DEST_PATH.javascript))
-	.pipe(rename('work.min.js'))
-	.pipe(uglify())
-	.pipe(gulp.dest(DEST_PATH.javascript));
+     }))
+     
+    .pipe(buffer())
+    .pipe(plumber())
+    .pipe(sourcemaps.write())
+    .pipe(concat('Work.js'))
+    .pipe(gulp.dest(DEST_PATH.javascript))
+    .pipe(rename('work.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(DEST_PATH.javascript));
 });
 
 // lint task: check and report js errors
 gulp.task('lint', function(){
-	return gulp.src(SRC_PATH.javascript)
-		.pipe(jshint())
-		.pipe(jshint.reporter(stylish));
+    return gulp.src(SRC_PATH.javascript)
+        .pipe(jshint())
+        .pipe(jshint.reporter(stylish));
 });
 
 gulp.task('clean-js', function() {
-	del([DEST_PATH.javascript+'/*.js', 
-			'!'+DEST_PATH.javascript+'/lib/*.js']);
+    del([DEST_PATH.javascript+'/*.js', 
+            '!'+DEST_PATH.javascript+'/lib/*.js']);
 });
 
 
@@ -142,20 +142,20 @@ var cleanCSS = require('gulp-clean-css');
 
 // removes other unused files minus any libraries
 gulp.task('clean-styles', function(){
-	del([DEST_PATH.styles+'/*.css', '!'+DEST_PATH.styles+'/lib/*.css']);
+    del([DEST_PATH.styles+'/*.css', '!'+DEST_PATH.styles+'/lib/*.css']);
 });
 
 // compile sass
 gulp.task('styles', ['clean-styles'], function() {
-	return gulp.src(SRC_PATH.styles)
-	.pipe(sass().on('error', sass.logError))
-	.pipe(autoprefixer({
-		browsers: ['last 3 versions']
-	}))
-	.pipe(cleanCSS({compatibility: 'ie8'}))
-	.pipe(rename('style.min.css'))
-	.pipe(sourcemaps.write())
-	.pipe(gulp.dest(DEST_PATH.styles));
+    return gulp.src(SRC_PATH.styles)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+        browsers: ['last 3 versions']
+    }))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(DEST_PATH.styles));
 });
 
 
@@ -164,37 +164,37 @@ gulp.task('styles', ['clean-styles'], function() {
 var image = require('gulp-image');
 
 gulp.task('clean-images', function(){
-	del([DEST_PATH.images+'/*'])
+    del([DEST_PATH.images+'/*'])
 });
 
 gulp.task('image', ['clean-images'], function() {
-	gulp.src(SRC_PATH.images)
-	.pipe(image({
-		pngquant: true,
-		optipng: false,
-		jpegoptim: true,
-		mozjpeg: true,
-		gifsicle: true,
-		svgo: true
-	}))
-	.pipe(gulp.dest(DEST_PATH.images));
+    gulp.src(SRC_PATH.images)
+    .pipe(image({
+        pngquant: true,
+        optipng: false,
+        jpegoptim: true,
+        mozjpeg: true,
+        gifsicle: true,
+        svgo: true
+    }))
+    .pipe(gulp.dest(DEST_PATH.images));
 });
 
 //=========Watch Tasks====================
 
 gulp.task('watch', function() {
-	gulp.watch(SRC_PATH.javascript, ['lint', 'homeScript', 'workScript']);
-	gulp.watch(SRC_PATH.styles, ['styles']);
+    gulp.watch(SRC_PATH.javascript, ['lint', 'homeScript', 'workScript']);
+    gulp.watch(SRC_PATH.styles, ['styles']);
 
 })
 
 gulp.task('default', 
-	['lint', 
-	'styles', 
-	'homeScript',
-	'workScript',
-	'image', 
-	'watch']);
+    ['lint', 
+    'styles', 
+    'homeScript',
+    'workScript',
+    'image', 
+    'watch']);
 
 
 
