@@ -20,6 +20,7 @@ PROJECT_DIR = os.path.dirname(__file__)
 TEMPLATE_DIR = os.path.join(PROJECT_DIR, "templates")
 
 PASSWORD_TEMPLATE_NAME = 'password-form'
+ERROR_PAGE_TEMPLATE_NAME = '404'
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(TEMPLATE_DIR),
@@ -39,7 +40,7 @@ class ProjectPage(webapp2.RequestHandler):
             template = JINJA_ENVIRONMENT.get_template(template_name + ".html")
             self.response.write(template.render())
         except jinja2.TemplateNotFound:
-            self.response.write("Page not found")
+            self.render_template(ERROR_PAGE_TEMPLATE_NAME)
             self.response.set_status(404)       
 
     def post(self, project):

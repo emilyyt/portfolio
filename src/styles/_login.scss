@@ -1,0 +1,90 @@
+/*
+login.scss
+
+All styles for the login form goes here.
+
+ */
+
+.login-page {
+	display: flex;
+	align-items: center;
+	background-color: $gray-2;
+	text-align: center;
+	color: $gray-7;
+	height: 100%;
+	h1 {
+		text-transform: none;
+		margin-bottom: 0;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: auto;
+
+		a {
+			color: $branding-blue;
+			text-decoration: underline;
+		}
+	}
+	.login-container {
+		margin: 0 auto;
+		width: 400px;
+		height: 30%;
+		min-height: 200px;
+		padding: 30px;
+		background-color: white;
+		border: 5px solid $branding-blue;
+		border-radius: 10px;
+	}
+
+	form {
+		display: flex;
+		justify-content: center;
+	}
+
+	input {
+		margin: 0 auto;
+	}
+	input[type="password"] {
+		border: none;
+		margin: 0;
+		padding-left: 15px;
+		border: 1px solid transparent;
+		height: 40px;
+		width: 300px;
+		font-size: 14px;
+		color: $gray-5;
+		font-family: 'Lato', Arial, sans-serif;
+		background-color: rgba(0,0,0, 0.08);
+		transition: 100ms all ease-in-out;
+
+	}
+
+	input[type="password"]::-webkit-input-placeholder {
+		color: $gray-7;
+		vertical-align: middle;
+		transition: 100ms all ease-in-out;
+	}
+
+	input[type="password"]:focus {
+		outline: none;
+		border: 1px solid $branding-blue;
+	}
+
+	input[type="submit"] {
+		border: none;
+		margin: 0;
+		cursor: pointer;
+		padding: 0 20px;
+		font-size: 18px;
+		color: white;
+		background-color: $gray-4;
+		transition: 100ms all ease-in-out;
+
+		&:hover {
+			background-color: $branding-blue;
+			transition: 100ms all ease-in-out;
+		}
+	}
+
+}

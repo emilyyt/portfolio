@@ -1,0 +1,24 @@
+/*
+404.scss
+
+All styles for the 404 page...
+
+ */
+
+.error-page {
+	display: flex;
+	align-items: center;
+	height: 100%;
+
+	.error-content {
+		margin: 0 auto;
+		text-align: center;
+		width: 500px;
+		height: 200px;
+	}
+
+	a {
+		text-decoration: underline;
+		color: $branding-blue;
+	}
+}
