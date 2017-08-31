@@ -4,7 +4,9 @@
   "description": "portfolio site with gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gcloud app deploy app.yaml",
+    "server": "dev_appserver.py app.yaml",
+    "build": "gulp"
   },
   "author": "Emily Tsai",
   "license": "ISC",

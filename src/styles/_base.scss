@@ -129,6 +129,7 @@ p {
   animation: bounce 1s infinite, color-animate 8s ease infinite;
 }
 
+
 @keyframes bounce {
   from, to {transform: translate(0px,0px); 
       animation-timing-function: cubic-bezier(.33,.01,.73,.29);
