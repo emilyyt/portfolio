@@ -46,7 +46,7 @@ class ProjectPage(webapp2.RequestHandler):
     def post(self, project):
         if self.request.get('pw') == 'emilyport':
             # Set cookie on response
-            self.response.set_cookie( "portfolioAccess", "valid", max_age=1200, path="/")
+            self.response.set_cookie( "portfolioAccess", "valid", max_age=2000, path="/")
             self.render_template(project)
         else:
             self.render_template(PASSWORD_TEMPLATE_NAME)
