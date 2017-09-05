@@ -52,6 +52,12 @@ mobile styles!
             width: 100%;
             flex-direction: column;
         }
+
+        .project-inner-container {
+            .logo {
+                height: 8vh;
+            }
+        }
     }
 
     [class*='col-'] {
