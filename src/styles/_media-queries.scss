@@ -40,7 +40,7 @@ mobile styles!
 
         header {
             min-height: 60vh;
-            // height: 80vh;
+            max-height: 80vh;
         }
     }
 
@@ -55,7 +55,7 @@ mobile styles!
 
         .project-inner-container {
             .logo {
-                height: 8vh;
+                height: 7vh;
             }
         }
     }
@@ -65,6 +65,7 @@ mobile styles!
         float: none;
         padding: 0vh 3vh 2vh $left-space;
         height: auto;
+        min-height: 70vh;
     }
 
     .splash {

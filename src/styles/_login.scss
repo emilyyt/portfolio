@@ -45,6 +45,8 @@ All styles for the login form goes here.
 
 	input {
 		margin: 0 auto;
+		-webkit-appearance: none;
+		border-radius: 0;
 	}
 	input[type="password"] {
 		border: none;
