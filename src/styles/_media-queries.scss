@@ -39,8 +39,7 @@ mobile styles!
 
 
         header {
-            min-height: 60vh;
-            max-height: 80vh;
+            min-height: 50vh;
         }
     }
 
@@ -55,7 +54,8 @@ mobile styles!
 
         .project-inner-container {
             .logo {
-                height: 7vh;
+                height: 3.5em;
+                margin-top: 1.5em;
             }
         }
     }
@@ -63,14 +63,13 @@ mobile styles!
     [class*='col-'] {
         width: 100%;
         float: none;
-        padding: 0vh 3vh 2vh $left-space;
+        padding: 0vh 1em 1em $left-space;
         height: auto;
-        min-height: 70vh;
+        min-height: 55vh;
     }
 
     .splash {
         background-size: 100%;
-        height: 55vh;
     }
 
     // Media Queries for resume section
@@ -107,6 +106,10 @@ mobile styles!
     // Media Queries for work detail pages
     section.work-container {
         width: 100%;
+        padding-left: $left-space;
+        padding-right: $left-space;
+        box-sizing: border-box;
+        
         h1, h2, .work-content {
             line-height: 1.5;
             font-size: 24px;
