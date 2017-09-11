@@ -109,7 +109,7 @@ mobile styles!
         padding-left: $left-space;
         padding-right: $left-space;
         box-sizing: border-box;
-        
+
         h1, h2, .work-content {
             line-height: 1.5;
             font-size: 24px;
@@ -144,4 +144,85 @@ mobile styles!
 
     }
 
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (-webkit-min-device-pixel-ratio: 2)
+{
+/* Styles */
+// General and Homepage media queries
+    body, html, li {
+        font-size: 15px;
+        -webkit-text-size-adjust:none;
+        max-width: 100%;
+    }
+
+    // Media Queries for project section
+    .project-outer-container {
+        min-width: inherit;
+        width: 100%;
+        .project-inner-container, .project-inner-container.reverse-order  {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    [class*='col-'] {
+        width: 100%;
+        float: none;
+        padding: 0vh 5em 1em 5em;
+        height: auto;
+        min-height: 55vh;
+    }
+
+    .splash {
+        background-size: 100%;
+    }
+
+    .ch-mobile, .stockpile, .pharmacy {
+        background-position: center top
+    }
+
+    // Media Queries for resume section
+    .resume-section {
+        width: 100%;
+        padding-top: 8vh;
+
+        h1 {
+            padding-left: 5em;
+            font-size: 3vh;
+            margin-bottom: 5em;
+        }
+
+        .download-button {
+            margin-left: 5em;
+        }
+
+        .resume-content-container {
+            padding-left: 5em;
+            padding-right: 5em;
+            display: block;
+            .resume-content {
+                display: block;
+            }
+        }
+    }
+
+    .contact section {
+        width: 100%;
+
+        .contact-content {
+            width: 100%;
+
+            .contact-label ul li {
+                width: 100%;
+                padding: 0;
+            }
+
+        }
+    }
 }
