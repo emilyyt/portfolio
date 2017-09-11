@@ -35,10 +35,10 @@ class HomePage(webapp2.RequestHandler):
 
 class ProjectPage(webapp2.RequestHandler):
 
-    def render_template(self, template_name):
+    def render_template(self, template_name, context={}):
         try:
             template = JINJA_ENVIRONMENT.get_template(template_name + ".html")
-            self.response.write(template.render())
+            self.response.write(template.render(context))
         except jinja2.TemplateNotFound:
             self.render_template(ERROR_PAGE_TEMPLATE_NAME)
             self.response.set_status(404)       
@@ -49,7 +49,7 @@ class ProjectPage(webapp2.RequestHandler):
             self.response.set_cookie( "portfolioAccess", "valid", max_age=2000, path="/")
             self.render_template(project)
         else:
-            self.render_template(PASSWORD_TEMPLATE_NAME)
+            self.render_template(PASSWORD_TEMPLATE_NAME, {"error_message": "Password incorrect. Please try again."} )
 
     def get(self, project):
         # If they have the cookie you previously set and its the right value,

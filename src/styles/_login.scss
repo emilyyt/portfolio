@@ -30,12 +30,16 @@ All styles for the login form goes here.
 	.login-container {
 		margin: 0 auto;
 		width: 400px;
-		height: 200px;
-		min-height: 200px;
-		padding: 30px;
+		height: 250px;
+		min-height: 250px;
+		padding: 30px 30px 10px 30px;
 		background-color: white;
 		border: 5px solid $branding-blue;
 		border-radius: 10px;
+	}
+
+	.error-msg {
+		color: red;
 	}
 
 	form {
@@ -88,6 +92,12 @@ All styles for the login form goes here.
 			background-color: $branding-blue;
 			transition: 100ms all ease-in-out;
 		}
+	}
+
+	.error-message {
+		color: red;
+		margin-top: -20px;
+		margin-bottom: 20px;
 	}
 
 }
