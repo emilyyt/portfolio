@@ -4,9 +4,6 @@ mobile styles!
 */
 
 
-
-
-
 /* ----------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */
@@ -155,7 +152,7 @@ and (-webkit-min-device-pixel-ratio: 2)
 /* Styles */
 // General and Homepage media queries
     body, html, li {
-        font-size: 15px;
+        font-size: 16px;
         -webkit-text-size-adjust:none;
         max-width: 100%;
     }
@@ -180,12 +177,11 @@ and (-webkit-min-device-pixel-ratio: 2)
     }
 
     .splash {
-        background-size: 100%;
+        margin: 5em auto;
+        background-size: 80%;
+        background-position: center bottom;
     }
 
-    .ch-mobile, .stockpile, .pharmacy {
-        background-position: center top
-    }
 
     // Media Queries for resume section
     .resume-section {
@@ -193,9 +189,9 @@ and (-webkit-min-device-pixel-ratio: 2)
         padding-top: 8vh;
 
         h1 {
-            padding-left: 5em;
-            font-size: 3vh;
+            font-size: 2em;
             margin-bottom: 5em;
+            margin-left: 2.5em;
         }
 
         .download-button {
@@ -224,5 +220,13 @@ and (-webkit-min-device-pixel-ratio: 2)
             }
 
         }
+    }
+
+
+    section.work-container {
+        width: 100%;
+        padding-left: 5em;
+        padding-right: 5em;
+        box-sizing: border-box;
     }
 }
