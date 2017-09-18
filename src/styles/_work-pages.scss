@@ -201,33 +201,6 @@ section.work-container {
 		font-style: italic;
 	}
 
-	.tamagotchi-ul {
-		display: flex;
-		justify-content: space-between;
-		li {
-			display: flex;
-			flex-direction: column;
-			height: 160px;
-			width: 100%;
-			text-align: center;
-			background-size: 180px;
-			background-repeat: no-repeat;
-			background-position: center;
-			padding-bottom: 50px;
-			font-weight: 500;
-			color: $gray-6;
-			&.snake-icon {
-				background-image: url(../images/tamagotchi-snake.png);
-			}
-			&.microcontroller-icon {
-				background-image: url(../images/tamagotchi-microcontroller.png);
-			}
-			&.tamagotchi-icon {
-				background-image: url(../images/tamagotchi-icon.png);
-			}
-		}
-
-	}
 
 	.arrow-annotation {
 		display: inline-block;
@@ -246,6 +219,12 @@ section.work-container {
 	}
 }
 
+.intro-box {
+	padding: 30px;
+	background-color: $gray-11;
+	margin-bottom: 30px;
+}
+
 /*Prototype Videos*/
 .prototype-video {
 	text-align: center;
@@ -256,24 +235,8 @@ section.work-container {
 
 }
 
-/*Context Styles*/
-.context-ul {
-	padding: 30px 50px;
-	line-height: 2.8;
-	
-	li:before {
-		content: '';
-		display: inline-block;
-		background-image: url(../images/context-ul3.svg);
-		height: 18px;
-		width: 18px;
-		margin-right: 5px;
-
-	}
-}
 
 /*Navigation Redesign*/
-
 .ch-vs-students {
 	display: flex;
 	text-align: center;

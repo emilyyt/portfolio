@@ -3,14 +3,13 @@
 {% block content %}
 <h1>Course Hero</h1>
 <h2>Mobile Rebranding</h2>
-<p>
+<div class="intro-box">
 Course Hero aims to empower college students to access and share school resources - such as class notes, provide tutoring services and flashcard sets - to help them improve in class. 
-</p>
+</div>
 <img class="lazy" data-original="../../static/build/images/ch-mobile-logos.png" alt="Course Hero Logos" width="100%" />
-<p>My biggest project upon joining Course Hero's Mobile team was rebranding our iOS and Android apps. The company had invested in an external vendor to deliver a company brand guideline with a new logo, color scheme, brand attributes, and rules around color usage across all digital and tangible products.</p>
-
-<p> 
-	Following the branding guideline release, I was tasked to carry direct design efforts for Android, while an interim mobile designer designed for iOS; we were the first product team to set foot on rebranding efforts at Course Hero, which meant that mobile designs had to set the example for all Course Hero product teams on the web app. Initially, the task involved updating color, type and logo. However, as I evaluated both apps screen by screen through a high-level heuristic evaluation and considered the graphic element usage with the brand attributes I was given, the project grew in size.
+<p>In the summer of 2016, I was tasked with rebranding Course Hero’s iOS and Android Apps. The company was set on differentiating itself from other competitors in the education-technology space and invested in an external vendor to deliver a company brand guideline with a new logo, color scheme, brand attributes, and rules around color usage across all digital and tangible products.</p>
+<p>
+The mobile apps were the first of Course Hero’s products to undergo rebranding which meant that mobile designs had to set the example for other product teams. Initially, the task involved updating color, type and logo. However, as I evaluated both apps screen by screen through a high-level heuristic evaluation, the project grew in size. I found many inconsistent UI patterns and bugs, and noticed that some usability best practices were not incorporated in the app implementation (ie. tap feedback, path of Android’s hardware back button).
 </p>
 <div class="caption">
 	Some old vs. new designs
@@ -18,19 +17,27 @@ Course Hero aims to empower college students to access and share school resource
 <img class="lazy" data-original="../../static/build/images/ch-mobile-old.png" alt="Course Hero Old Branding" width="100%"/>
 <img class="lazy" data-original="../../static/build/images/ch-mobile-docs.png" alt="Course Hero Documents feature" width="100%"/>
 <p>
-	One of my main challenges throughout this rebranding project was strategically balancing efforts between brand recognition and app practicality. Our brand went from a light blue shield logo that symbolized strength and education into a new logo that could be dually interpreted as a book or as a shield with a shining star that together, embodies mastery and honor. Beyond that, we want to build a reputation of professionalism and approachability because we do have a lot of bad press online associated with our old logo. We were anxious and excited to shed our old skin for this new style and wanted to share the new look with our users asap. Yet, there were several occasions when I had to choose between prioritizing usability versus brand recognition. I ultimately chose to prioritize usability because I believe loyal users are earned by realizing a helpful and functional app and not by how appealing our brand looks. 
+	One of the main challenges throughout this project was balancing efforts between brand recognition and usability.  The design team wanted to build a reputation of professionalism and approachability with this new brand identity and there were several key pages in the app that I iterated on to bring out the brand. In many cases, I felt that the brand overshadowed the functional aspects of the app and had to re-evaluate my design decisions. In most cases, I ultimately chose to prioritize usability because I believe loyal users are earned by realizing a helpful and functional app and not by how appealing our brand looks. In our old brand, we had a giant graphic sitting above all major CTA’s on the home screen. Since Android devices come in various sizes and resolutions, the graphic on the top take up too much valuable screen real-estate and hide some CTA’s below the fold.
 </p>
 <div class="caption">
-	On the left is the iOS homepage mockup with the old brand. The graphic above the CTAs is visually appealing but not practical. Since Android devices come in various sizes and resolutions, the graphic on the top take up too much valuable screen real-estate and hide CTAs under the fold.</div>
+	On the left is the iOS homepage mockup with the old brand. The graphic above the CTAs is visually appealing but not practical. 
+</div>
 <img class="lazy" data-original="../../static/build/images/ch-old-home.png" alt="Course Hero Old Homepage" width="100%"/>
+<p> 
+	In a different scenario, I created several designs for our payment page in order to bring out our brand attributes. However, due to the small screens on mobile devices, we had to prioritize clarifying our subscription model to our students over using fancy graphics or animations. 
+</p>
 <div class="caption">
-	I did numerous iterations on the payment page to try out a couple ways of incorporating our new brand into it. We ended up choosing the variation that clearly illustrates our membership value propositions. It also ended being the most subtly branded of all variations.</div>
+	These are the designs I created for our payment page. We ended up choosing the first variation. It clearly illustrates our membership value propositions but was also the most subtly branded of all variations.</div>
 <img class="lazy" data-original="../../static/build/images/ch-payments.png" zalt="Payments page iterations" width="100%"/>
+<h3>Design Documentation</h3>
 <p>
-	In addition to rebranding, because the company did not have a dedicated mobile designer for almost a year, there was no design mocks or any design documentation created specifically for our Android app (because the Android team was formed less than 12 months before that). Android devs had been using iOS mockups and retrofitting areas of the app that were not consistent with Android standards (ie. whether to use Android activities or fragments to represent whole screens entirely or subsets of the screen). 
+	Prior to my joining the company, Course Hero did not have any dedicated mobile designers. As a result, there were no Android-specific mocks or related design documentation. Instead, Android devs had been implementing based on iOS mockups, retrofitting areas of the app that were not consistent with Android standards.
 </p>
 <p>
-	I spent several weeks just going through the app and making sure that there was an artboard on Zeplin for every single screen that devs can refer to because minor inconsistencies were noticed between the design and what was on production. Some screens that require minor adjustments in paddings and interactions were handled within the scope of the rebranding project. Others would be deferred to a later time as separate tasks. At some point, I noticed that I was having repeated conversations with my devs and PM about similar types of UI/interaction adjustments, which then led me into creating a barebones styleguide for the purposes of streamlining conversations with devs. 
+	As part of the rebranding efforts, I spent several weeks creating reference mocks for each screen, so that developers could have one source of truth. Some features only required minor adjustments in paddings and interactions -- these were handled within the scope of the rebranding project. Other, more complex fixes would be deferred until later. 
+</p>
+<p>
+	The task of producing rebranded mocks for the entire application also gave me an opportunity to step back and create a style guide to document common conventions for UI patterns or interactions. This allowed our team to avoid having the same conversations over and over, and made our development work more efficient.
 </p>
 
 <div class="caption">
@@ -38,25 +45,37 @@ Course Hero aims to empower college students to access and share school resource
 </div>
 	<img class="lazy" data-original="../../static/build/images/ch-styleguide.png" alt="Mobile Styleguide" width="100%"/>
 
-
+<h3>Play Store Icons </h3>
 <p>
-	I also created the app icon and app preview images on the Play Store listing page. The thought was to stand out from other app icons that users might see on their phone. We decided to go for a circular icon with a white stroke to give it a more empowering look (top-right).
+	A listing in the app store is often a user’s first impression of an application, so it’s critically important to make sure it has the intended effect.  As part of Course Hero’s rebranding, I created a new app icon on the Play Store listing page. Our goals for this icon were to (a) to stand out from other app icons that users might see on their phone and (b) communicate a feeling of empowerment and professionalism. Some of the icon options enhanced the jarring sharp edges of our logo when placed next to other app icons. Ultimately, we decided to go for a circular icon with a thick white stroke (top-right) due to the visual similarities with badges of achievement and mastery.
 </p>
 <img class="lazy" data-original="../../static/build/images/ch-app-icons.png" alt="App icon iterations" width="100%"/>
 <div class="caption">
 	I tested each of these icons in an ocean of other icons and held a design critique with other designers and mobile team.
 </div>
 <img class="lazy" data-original="../../static/build/images/ch-app-icon-screens.png" alt="App icon screenshots" width="100%"/>
+
+<h3>In-app Icons</h3>
+<p>
+In order to better pair our in-app icons with our new font, the icons had to be readjusted. I felt that the strokes of the old icons were way too thin and some of the icons didn't make much sense paired with their corresponding text-label. This wasn't part of the scope of rebranding, but I eventually worked with our visual designer to redesign them in Illustrator. We then iterated and tested the new icons in the context of the mobile app screens to ensure that they pair well with the associated text.
+</p>
 <div class="caption">
-	In order to better pair our icons with the new font, the icons had to be readjusted. I felt that the strokes of the old icons were way too thin and some of the icons didn't make much sense paired with their corresponding text-label. This wasn't part of the scope of rebranding, but I eventually worked with our visual designer to redo these, iterate and test new icons in the context of the mobile app screens to ensure that they pair well with the associated text.
+	This is our new icon set.
 </div>
 <img class="lazy" data-original="../../static/build/images/ch-icons.png" alt="Course Hero icons" width="100%"/>
 <div class="caption">
 	Here are a couple screenshots of screens with the new icons.
 </div>
 <img class="lazy" data-original="../../static/build/images/ch-mobile-features.png" alt="Other Course Hero features" width="100%"/>
+<h3>Results</h3>
 <p>
-	Since the release of the new brand in September (plus the additional interaction improvements I convinced my PM and devs to squeeze in), our Analytics team measured every team's net promoter score at the end of the year; Android was a 36. To provide some context, the overall company's NPS was at a -9, iOS was at 15 and one of our company's annual goals for 2016 was to hit a NPS of 0. It was unclear whether it was the rebranding, the interaction improvements or something else that had more to do with the high NPS. However, our traffic by the end of Dec 2016 had more than doubled since I joined in June 2016.
+	Starting from mid-2016, our company shifted focus onto customer satisfaction, specifically measuring and growing our 
+	<a href=”https://www.netpromoter.com/know/” >net promoter scores</a>
+	, which ranges from -100 to +100. A positive score means that we have more users who are willing to recommend our apps to others, while a negative score indicates an app experience that detracts our users.
+</p>
+<p>
+	The company as a whole averaged -9. When breaking down each product team’s scores, Android came out on top of all product teams at 36 and iOS was at 15. This is a huge win for our team and an indication of success for both our rebranding efforts and the interaction improvements. 
+
 </p>
 
 
