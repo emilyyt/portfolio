@@ -5,12 +5,13 @@
 <h2>Navigation Redesign</h2>
     <h3>The Problem</h3>
     <p>
-    When I did my first several walkthroughs of the app, I noticed several friction points that prevented users from accessing the full potential of what we had to offer. Firstly, a homescreen of 6 loud calls-to-actions with heavy text descriptions is daunting. Secondly, as a company that prides itself for its abundant study resources, we didn’t do a good job showcasing any of the content. Instead, these documents are hidden behind a search functionality, and is at least two clicks away from the home screen; four if they are a first-time user. After running some user research asking students to prepare for their upcoming exam, students repeatedly expressed confusion over our payment model and struggled through their search to find the perfect study resource. Not only did students have to put in a lot of effort to find content, the app overall wasn't presented in a way that made sense to them; seems like the app's information architecture needs work, but I had to gather more evidence.
+    The initial problem stemmed back to mid-2016 when our mobile team was still young. We were excited to grow and reach feature parity with web. However, our growth rate started slowing down, which raised some red flags to the organization. Previously, as the team was hyperfocused on feature parity, little effort was placed around exploring our mobile strategy. Since Course Hero serves a particularly tech-savvy group of our population - students, one of my key action items was to idenfity gaps in our user experience to understand the root cause of the problem.</p>
+    <img class="lazy small-image" data-original="../static/build/images/ch-old-home-android-only.png" alt="Original homepage" width="50%"/>
+    <p>When I did my first several walkthroughs of the app, I noticed several friction points that prevented users from accessing the full potential of what we had to offer. Firstly, a homescreen of 6 loud calls-to-actions with heavy text descriptions is daunting. Secondly, as a company that prides itself for its abundant study resources, we didn’t do a good job showcasing any of the content. Instead, these documents are hidden behind a search functionality, and is at least two clicks away from the home screen, four clicks if they are a first-time user. After running some user research asking students to prepare for their upcoming exam, students repeatedly expressed confusion over our payment model and struggled through their search to find the perfect study resource. Not only did students have to put in a lot of effort to find content, the app overall wasn't presented in a way that made sense to them; seems like the app's information architecture needs work, but I had to gather more evidence.
     </p>
-    <div class="caption">Home screen before and after rebranding.</div>
-    <img class="lazy" data-original="../static/build/images/ch-old-home.png" alt="Old homepage" width="100%"/>
+    
     <p>
-    I decided first, to propose tackling each friction point as separate issues. If small design changes can produce good results, a large-scale information architecture reorg would be unnecessary. The major problem areas I focused on include: 1) reduce the intimidation factor on the home screen 2) redesign the hamburger menu (our primary navigation patterns) to help users understand where they are and where they want to go 3) improve the search experience to help users explore the content we have to offer , which we presume would increase content unlocks.
+    I decided first, to propose tackling each friction point as separate issues. If small design changes can produce good results, a large-scale information architecture reorg would be unnecessary. The major problem areas I focused on include: 1) reduce the intimidation factor on the home screen 2) redesign the hamburger menu (our primary navigation patterns) to help users understand where they are and where they want to go 3) improve the search experience to help users explore the content we have to offer, which we presume would increase content unlocks.
 
     </p>
 
@@ -30,11 +31,10 @@
         <video controls="controls" autoplay loop src="../static/build/images/ch-autocomplete.mov" alt="Android Autocomplete" width="360px">
         </video>
     </div>
-
-
+    <p>After these redesigns were pushed out, we noticed a significant improvement in our app metrics and we also hit all of our business goals. Traffic increased steadily and more people started paying for our subscription. However, we also wanted to see our qualitative data backed up the updates we made and determine if these changes really solved the initial usability problems. We then conducted a feature validation study where we asked our student users to perform the same research task as last time - use our app to prepare for an upcoming exam. Yet, students still struggled. The two main areas they struggled with were: finding content, and locating content that they've unlocked. Both of these areas were key to their study experience.
     <h3>Students vs. Course Hero</h3>
 
-    <p>Over time, I developed an increased understanding of our business goals and through the several user research sessions I conducted, I noticed a mismatch between what students actually want and what we were offering to them. This was the root cause of many friction points that existed in the app. </p>
+    <p>I reflected on our current approach, and compared it with the student insights we gathered and came up with this: </p>
     <div class="ch-vs-students">
         <ul class="student-goal">
             <li class="goal-heading">Student Goal</li>
@@ -45,7 +45,7 @@
         <ul class="ch-goal">
             <li class="goal-heading">Course Hero Goal</li>
             <li class="goal-description">Help students get good grades</li>
-            <li class="action-heading">Areas of focus:</li>
+            <li class="action-heading">Core Business Strategy:</li>
             <li class="action-description">Increase collection of helpful student content</li>
             <li class="action-description">Improve content discovery</li>
             <li class="action-description">Provide study tools</li>
@@ -53,27 +53,27 @@
     </div>
     <div class="caption"> Our team's primary focus: Increase collection of helpful student content </div>
     <img class="lazy" data-original="../static/build/images/ch-primary.png" alt="primary goal in app" width="100%"/>
-    <p>As displayed above, our company's goal aims to help students do better at school. However, our mobile app addressed each "area of focus" very literally. When evaluating the motivations of our student users, we found that Course Hero's primary focus (to collect study resources from our students) is not the priority of our users. Yet, 3 out of 6 CTAs on our home screen are dedicated directly at collecting content that users create. At this point in the experience, a new user wouldn’t know why they should contribute content. This generally causes our users to immediately click on Search, a functionality they recognize. As it turns out, our students mainly access Course Hero in moments of desperation, often when they need resource access to study last minute. Simply creating large CTAs so that users have no option but to check them out is not great user experience, especially not on the home screen. Moreover, having the same CTAs repeated in a long hamburger menu may cause some users to interact with the top few items but if they don't understand what they are interacting with, they may just drop-off entirely.
+    <p>As displayed above, our company's goal aims to help students do better at school. When looking at our business strategy, I noticed that our mobile app had addressed our business strategy very literally. When evaluating the motivations of our student users, we found that Course Hero's primary focus (to collect student content) is NOT important to the user without much context or value delivered. Yet, 3 out of 6 CTAs on there are dedicated directly at collecting student contents because we wanted to hit our business goals. As it turns out, our students mainly access Course Hero in moments of desperation, often when they need resource access to study last minute. Since content creation is not what students are looking for, they generally click on Search instead, a functionality they recognize. Simply creating large CTAs so that users have no option but to check them out is not great user experience, especially not on the home screen. Moreover, having the same CTAs repeated in a long hamburger menu may cause some users to interact with the top few items but if they don't understand what they are interacting with, they may just drop-off entirely.
     </p>
     <div class="caption">Secondary focus: Encourage students to explore our content (increase acquisition)</div>
     <img class="lazy" data-original="../static/build/images/ch-secondary.png" alt="secondary goal in app" width="100%"/>
-    <p>Search is our main tool to encourage students to explore our content and hopefully convince them to purchase but sadly, our search results haven’t been very relevant without much effort from our users.
+    <p>Showcased above, is our secondary focus of our business strategy, Search. Search is our main content discovery tool and we depend heavily on it to help students find content and convert but sadly, our search algorithm doesn't output relevant results, which causes student frustration. 
     </p>
     <div class="caption">Tertiary focus: Provide study tools (increase engagement)</div>
     <img class="lazy" data-original="../static/build/images/ch-tertiary.png" alt="tertiary goal in app" width="100%"/>
     <p>
-    Study tools is probably one of my favorite features we build for students but buried layers deep in our funnel. By the time students come across one of these study tools - which we don’t surface until after a purchase - they are so fed up by their previous experience that they try to take screenshots of the content and stop engaging with the product altogether. 
+    Study tools, shown above is probably one of my favorite features we build for students but they're buried layers deep in our funnel. By the time students come across one of these study tools - which we don’t surface until after a purchase - they are so fed up by their previous experience that they try to take screenshots of the content and stop engaging with the product altogether. 
     </p>
     <h3>Let's Help Students Access Materials Quickly and Easily</h3>
     <p>
-    I evaluated the same set of friction points differently after comparing user needs with what we are executing. Previously, we've implemented solutions targeted at specific problems. However, they didn't fully resolve my initial concerns based on the feature validation studies I ran, especially around finding relevant content. Students are still confused by the experience.
+    I evaluated the same set of friction points differently after comparing user needs with what we are executing. Previously, we've implemented solutions targeted at specific problems. However, now I want to make sure that we carefully balance our user needs with our business strategy.
     </p>
 
     <p>
-    I decided to reduce the number of clicks students had to go through to find the content they want by surfacing documents earlier in the funnel. In the initial search iterations, users had to proactively filter for their school and course. Instead, we could recommend personalized content to users based on existing information we know about them such as the school they attend or even more specifically, courses they are taking. Furthermore, we could also promote recently viewed and unlocked documents so that students can easily access them to study for an upcoming exam. I want students to leave Course Hero feeling positive about their experience with us. 
+    First, I decided to reduce the number of clicks students had to go through to find the content they want by surfacing documents earlier in the funnel. In the initial search iterations, users had to proactively filter for their school and course. However, content discovery doesn't always equate search experience. Instead, we could recommend personalized content to users based on existing information we know about them such as the school they attend or even more specifically, courses they are taking. Furthermore, we could also promote recently viewed and unlocked documents so that students can easily access them to study for an upcoming exam. This way, we can present some personalized content without users having to interact with search.
     </p>
     <p>
-    I looked through various well-used content-based apps in the market such as Facebook, Instagram, Yelp, Youtube, Evernote, Medium, and Spotify. All of them have one thing in common - easy access to new and old content, what people describe as a content-rich feed. I began redesigning a new home screen.
+    To help inform my design, I looked through various well-used content-based apps in the market such as Facebook, Instagram, Yelp, Youtube, Evernote, Medium, and Spotify. All of them have one thing in common - easy access to new and old content, what people describe as a content-rich feed. With that, I began redesigning a new home screen.
     </p>
     <p>
     Next, I evaluated the effectiveness of our navigation design pattern - hamburger menu. Our existing metrics indicated that the hamburger menu was almost never used (less than 1% of iOS app traffic open it at least once and ~40% on Android). Hamburger menus are a standard navigation pattern for Android but even for Android traffic, 40% seems quite low. During our usability tests, we also notice users' tendency to pull out the hamburger menu specifically for going back to home. Ironically, every CTA that is available on the home screen is readily available in the hamburger menu, which means that users are spending an additional click to access the same CTAs. This is evidence that the hamburger menu is ineffective. 
@@ -81,19 +81,20 @@
     <div class="caption"> Some more designs incorporating a content-rich concept.</div>
     <img class="lazy" data-original="../static/build/images/ch-home-2.png" alt="Homepage Iterations" width="100%"/>
     <p>
-    By this point, I began designing rethinking the information architecture on my own, especially with Course Hero vs. Students' Motivations in mind. I ran an information architecture exercise with other designers where designers paper prototyped their own Course Hero app experience with a set of keywords I provided to incorporated as UI elements. We iterated on a few different ways to organize the app with navigation patterns such as top tab navigation, bottom tab navigation, a different hamburger menu and a custom navigation. Each design was presented to my product team and eventually, everyone agreed to move forward with an A/B test of the bottom tab navigation design. </p>
+    By this point, I began designing rethinking the information architecture on my own, especially with Course Hero vs. Students' comparison in mind. I ran an information architecture exercise with other designers where designers paper prototyped their own Course Hero app experience with a set of keywords I provided to incorporated as UI elements. We iterated on a few different ways to organize the app with navigation patterns such as top tab navigation, bottom tab navigation, a different hamburger menu and a custom navigation. Each design was presented to my product team and eventually, everyone agreed to move forward with an A/B test of the bottom tab navigation design. </p>
     <div class="caption">Navigation patterns we experimented with</div>
     <img class="lazy" data-original="../static/build/images/ch-nav-patterns.png" alt="Navigation patterns" width="100%"/>
     <p>The rationale behind choosing a bottom tab navigation is that 1) it presents a small set of options to the user early in the funnel (increase memorability) 2) the bottom tabs are almost always available to the users without any proactiveness (increase availability) 3) the information architecture made more sense to the users we've concept tested with (improved information architecture). 
     </p>
     <div class="caption">Bottom tab navigation with a content-rich home screen</div>
     <img class="lazy" data-original="../static/build/images/ch-home-3.png" alt="Homepage Iterations" width="100%"/>
+    <img class="lazy small-image" data-original="../static/build/images/ch-new-home.png" alt="New Homepage" width="40%"/>
 
 
     <h3>Results</h3>
-    <img class="lazy small-image" data-original="../static/build/images/ch-new-home.png" alt="New Homepage" width="50%"/>
     <p>
-    The A/B test is still underway. However, the progress that was made from a design standpoint set a huge milestone. Design has never been the driver of product decisions in the past at Course Hero due to our business-driven culture. However, we were able to combine business metrics along with some design research to make a compelling argument. This is the first time that a design pattern is expected to heavily influence the growth of a product for us, which is an exciting accomplishment for the entire design team. To measure success, we want to look for several metrics: 1) increased document unlocks 2) increased visits to unlocked content 3) increased usage of the new bottom tab navigation and 4) increased activity on the home screen. Separately, I will also run a user research session to determine if students are finding study documents sooner. If users enjoy their experience with existing unlocked documents, over time we would also expect them to spend more money or upload more content in exchange for more content unlocks. 
+    We're running two separate A/B tests - one for the home screen and then for the new navigation. The first A/B test is to determine whether the new home screen is truly an improvement on on business metrics. So far, it's been running for two weeks and we have identified significant improvements already in documents uploaded, document previews, and membership subscriptions.</p>
+    <p> Follow this A/B test, we will test the winning bucket with the navigation A/B test. Specifically, we want to look for several metrics: 1) increased document unlocks 2) increased visits to unlocked content and, 3) increased usage of the new bottom tab navigation. Separately, I will also run a user research session to determine if students have an easier time finding study documents.  
     </p>
 
     <ul class="subproject-container">
